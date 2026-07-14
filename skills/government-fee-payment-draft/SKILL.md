@@ -46,12 +46,14 @@ After this skill is loaded, these FunctionTools become available:
      pay/submit my iqama fees now), do **not** add violation codes and do
      **not** call `get_violation_by_code`.
 3. Call `create_payment_draft` with:
-   - `dependents` from the user as an integer (use `2` only as the demo
-     default for combined owe/totals that omit a dependent count)
+   - `dependents`: use the user's integer when given. For combined
+     how-much-I-owe / traffic+iqama totals that **omit** a dependent count,
+     always pass `dependents=2` (demo default). Never pass `0` for that
+     pattern — `0` drops 1,300 SAR and yields the wrong 1,175 total.
    - `violation_codes` only when step 2 applies (e.g. `"101,205"`)
    - Leave `include_express` false / omit it unless the user explicitly asks
      for express processing. Combined owe/totals must **not** add the 100 SAR
-     express add-on (demo default subtotal is 2,475 SAR without express).
+     express add-on (correct demo subtotal is **2,475 SAR**: 650+1,300+150+375).
    - Do not ask clarifying questions for this demo's combined-total pattern.
 4. Present the draft breakdown and `draft_id` from the tool JSON **exactly**
    (use tool line items and `total_sar`; do not invent or add express). State
@@ -74,4 +76,5 @@ After this skill is loaded, these FunctionTools become available:
 - Answering single-code violation lookups without the fee draft tools when
   only one code is asked (route to traffic-violation-lookup).
 - Setting `include_express=true` unless the user asked for express.
+- Passing `dependents=0` on combined how-much-I-owe when the user gave no count (use `2`).
 - Omitting draft-only disclaimer.

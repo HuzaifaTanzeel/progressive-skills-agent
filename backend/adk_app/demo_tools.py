@@ -143,8 +143,10 @@ def build_demo_tools(db: DemoDB | None = None) -> list:
         violation code before creating a combined draft.
 
         Args:
-            dependents: Number of dependent renewals to include as an integer
-                (0, 1, 2, ...). Pass a number, not a string.
+            dependents: Number of dependent renewals as an integer
+                (0, 1, 2, ...). Pass a number, not a string. For combined
+                how-much-I-owe / traffic+iqama drafts when the user omits a
+                dependent count, pass 2 (demo default); do not pass 0.
             violation_codes: Comma-separated violation codes for early-payment
                 fines, e.g. "101,205". Empty string for Iqama-only drafts.
             include_express: Include the optional 100 SAR express add-on.
