@@ -27,4 +27,5 @@ jobs:
         # No OPENAI_API_KEY — keeps this job LLM-free.
         # Covers: test_demo_tools, test_progressive_skills, test_skill_frontmatter,
         # and any other non-llm tests. Excludes test_evals / test_offtopic via -m.
-        run: python -m pytest -m "not llm" -v
+        # Ignore LLM modules so collection does not import LocalEvalService/vertexai.
+        run: python -m pytest -m "not llm" --ignore=tests/test_evals.py --ignore=tests/test_offtopic.py -v

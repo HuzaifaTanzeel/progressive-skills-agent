@@ -20,6 +20,7 @@ dependencies = [
     "tabulate",
     "tiktoken",
     "aiosqlite",
+    "google-cloud-aiplatform",
 ]
 
 [project.optional-dependencies]
