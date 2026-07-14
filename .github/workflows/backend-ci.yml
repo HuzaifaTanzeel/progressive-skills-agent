@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install backend package (pinned google-adk==2.4.0 via pyproject)
+      - name: Install backend package (pinned google-adk[db,eval]==2.4.0 via pyproject)
         run: |
           python -m pip install --upgrade pip
           pip install -e .

@@ -97,7 +97,7 @@ Reports land in `../evals/results/*.json` for the admin endpoint.
 
 ## Pinned dependencies
 
-- `google-adk==2.4.0` - ADK 2.x with experimental Skills support (`SkillToolset`)
+- `google-adk[db,eval]==2.4.0` - ADK 2.x with experimental Skills support (`SkillToolset`)
 - `litellm` - excludes compromised versions 1.82.7 / 1.82.8 (see [ADK security advisory](https://github.com/google/adk-python/issues/5005))
 - `tiktoken` - token counting for harness token-budget report
 

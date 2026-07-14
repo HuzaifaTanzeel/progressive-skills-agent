@@ -9,7 +9,7 @@ description = "Saudi GovTech citizen services demo - ADK agent with Agent Skills
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "google-adk[db]==2.4.0",
+    "google-adk[db,eval]==2.4.0",
     "litellm>=1.82.9,!=1.82.7,!=1.82.8",
     "fastapi",
     "uvicorn",
@@ -20,7 +20,6 @@ dependencies = [
     "tabulate",
     "tiktoken",
     "aiosqlite",
-    "google-cloud-aiplatform",
 ]
 
 [project.optional-dependencies]

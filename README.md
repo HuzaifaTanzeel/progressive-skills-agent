@@ -6,7 +6,7 @@ This repo demonstrates Agent Skills as **runbooks over tools**, Evaluation-Drive
 
 ## Stack
 
-- **Agent framework:** Google ADK (`google-adk==2.4.0`) + `LiteLlm` (OpenAI default: `gpt-4o-mini`)
+- **Agent framework:** Google ADK (`google-adk[db,eval]==2.4.0`) + `LiteLlm` (OpenAI default: `gpt-4o-mini`)
 - **Skills:** agentskills.io folders under `skills/` via ADK `SkillToolset`
 - **Tools:** domain FunctionTools (`get_violation_by_code`, `list_centers_by_city`, …) on an in-memory seeded DB
 - **Eval:** ADK `EvalSet` / `tool_trajectory_avg_score` + pytest adversarial checks
@@ -63,4 +63,4 @@ Two GitHub Actions workflows (cost-split):
 | `.github/workflows/backend-ci.yml` | push / PR | Fast, **LLM-free**: `pytest -m "not llm"` (tools, progressive skills, frontmatter lint via test) |
 | `.github/workflows/skills-ci.yml` | push / PR | Full EDD gate: `harness.lint_skills`, `pytest -m llm`, `harness.regression_eval`, token-budget artifact |
 
-**Required secret for `skills-ci`:** repository secret `OPENAI_API_KEY` (Settings → Secrets and variables → Actions). Without it, `skills-ci` fails closed (no silent skip). Backend deps pin `google-adk[db]==2.4.0` via `backend/pyproject.toml`.
+**Required secret for `skills-ci`:** repository secret `OPENAI_API_KEY` (Settings → Secrets and variables → Actions). Without it, `skills-ci` fails closed (no silent skip). Backend deps pin `google-adk[db,eval]==2.4.0` via `backend/pyproject.toml`.
