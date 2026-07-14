@@ -1,8 +1,8 @@
 ---
 name: government-fee-payment-draft
 description: |
-  Draft how-much-I-owe totals (iqama, dependents, traffic+iqama). Draft-only; never submits. Not for single-code lookup or renewal docs.
-version: 1.1.1
+  Draft how-much-I-owe / combined totals (iqama+dependents or traffic+iqama). Draft-only. Not for single-code early-pay/settle-early — use traffic-violation-lookup.
+version: 1.1.2
 license: MIT
 tier: draft-only
 allowed-tools: ""
@@ -46,10 +46,12 @@ After this skill is loaded, these FunctionTools become available:
      pay/submit my iqama fees now), do **not** add violation codes and do
      **not** call `get_violation_by_code`.
 3. Call `create_payment_draft` with:
-   - `dependents`: use the user's integer when given. For combined
-     how-much-I-owe / traffic+iqama totals that **omit** a dependent count,
-     always pass `dependents=2` (demo default). Never pass `0` for that
-     pattern — `0` drops 1,300 SAR and yields the wrong 1,175 total.
+   - `dependents`: use the user's integer when given. **Only** for
+     combined how-much-I-owe / traffic+iqama totals that omit a dependent
+     count, pass `dependents=2` (demo default → 2,475 SAR with 101+205).
+     Never pass `0` on that combined pattern. Do **not** invent dependents
+     for a single-code early-pay question (that belongs in
+     traffic-violation-lookup, not this skill).
    - `violation_codes` only when step 2 applies (e.g. `"101,205"`)
    - Leave `include_express` false / omit it unless the user explicitly asks
      for express processing. Combined owe/totals must **not** add the 100 SAR
@@ -73,8 +75,8 @@ After this skill is loaded, these FunctionTools become available:
 - Inventing SAR amounts instead of using tool results.
 - Skipping `get_violation_by_code` when violation codes are part of the total.
 - Calling the same violation code repeatedly after a successful lookup.
-- Answering single-code violation lookups without the fee draft tools when
-  only one code is asked (route to traffic-violation-lookup).
+- Handling a single-code early-pay / settle-early ticket here — route to
+  traffic-violation-lookup instead (no create_payment_draft).
 - Setting `include_express=true` unless the user asked for express.
 - Passing `dependents=0` on combined how-much-I-owe when the user gave no count (use `2`).
 - Omitting draft-only disclaimer.
