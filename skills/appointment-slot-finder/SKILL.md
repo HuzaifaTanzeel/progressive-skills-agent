@@ -34,8 +34,8 @@ Date rules:
 
 ## Output format
 
-- List slots by center name and ID.
-- Note weekends and dummy holidays are excluded.
+- List **every** slot from the tool JSON by center name and ID — do not drop times.
+- Note weekends and dummy holidays are already excluded by the tool.
 - Illustrative/dummy disclaimer and Absher verification line.
 
 ## Anti-patterns to avoid

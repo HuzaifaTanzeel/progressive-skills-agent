@@ -516,7 +516,7 @@ def main() -> None:
                     "Available dummy openings in Dammam (July 22–25, 2026, "
                     "excluding Fri/Sat and dummy holidays):\n\n"
                     "- Dammam Main (DMM-01): July 22 09:00, July 23 10:00\n"
-                    "- Dammam East (DMM-02): July 22 15:00, July 25 11:00\n\n"
+                    "- Dammam East (DMM-02): July 22 15:00, July 23 11:00\n\n"
                     "Illustrative demo data. Confirm via Absher."
                 ),
                 [
