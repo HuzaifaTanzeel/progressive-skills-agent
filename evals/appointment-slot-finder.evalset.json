@@ -1,0 +1,218 @@
+{
+  "eval_set_id": "appointment-slot-finder",
+  "name": "Appointment Slot Finder Eval Set",
+  "description": "Ordered multi-step tool trajectory: list_centers_by_city then list_available_slots.",
+  "eval_cases": [
+    {
+      "eval_id": "positive_riyadh_next_week",
+      "expected_skill": "appointment-slot-finder",
+      "conversation": [
+        {
+          "invocation_id": "positive_riyadh_next_week",
+          "user_content": {
+            "parts": [
+              {
+                "text": "Find available appointment slots in Riyadh between July 20 and July 27, 2026."
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Available dummy appointment slots in Riyadh (July 20–27, 2026, excluding Fri/Sat and dummy holidays):\n\n- Riyadh Central (RYD-01): July 20 09:00, July 20 14:00, July 22 10:00, July 23 11:00, July 27 09:00\n- Riyadh North (RYD-02): July 21 10:00, July 22 15:00, July 26 11:00\n\nIllustrative demo data only. Book via official channels (Absher)."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "name": "load_skill",
+                "args": {
+                  "skill_name": "appointment-slot-finder"
+                }
+              },
+              {
+                "name": "list_centers_by_city",
+                "args": {
+                  "city": "Riyadh"
+                }
+              },
+              {
+                "name": "list_available_slots",
+                "args": {
+                  "center_ids": "RYD-01,RYD-02",
+                  "start_date": "2026-07-20",
+                  "end_date": "2026-07-27"
+                }
+              }
+            ],
+            "intermediate_responses": []
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "adk_app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "positive_jeddah_slots",
+      "expected_skill": "appointment-slot-finder",
+      "conversation": [
+        {
+          "invocation_id": "positive_jeddah_slots",
+          "user_content": {
+            "parts": [
+              {
+                "text": "Show me open appointment times in Jeddah for the week of July 20, 2026."
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Available dummy slots in Jeddah (week of July 20, 2026, excluding weekends and dummy holidays):\n\n- Jeddah Corniche (JED-01): July 20 11:00, July 22 09:00, July 23 14:00\n- Jeddah South (JED-02): July 21 13:00, July 26 09:00\n\nDemo data only. Verify and book via Absher."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "name": "load_skill",
+                "args": {
+                  "skill_name": "appointment-slot-finder"
+                }
+              },
+              {
+                "name": "list_centers_by_city",
+                "args": {
+                  "city": "Jeddah"
+                }
+              },
+              {
+                "name": "list_available_slots",
+                "args": {
+                  "center_ids": "JED-01,JED-02",
+                  "start_date": "2026-07-20",
+                  "end_date": "2026-07-27"
+                }
+              }
+            ],
+            "intermediate_responses": []
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "adk_app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "positive_rephrasing_book_visit",
+      "expected_skill": "appointment-slot-finder",
+      "conversation": [
+        {
+          "invocation_id": "positive_rephrasing_book_visit",
+          "user_content": {
+            "parts": [
+              {
+                "text": "I need to book a government office visit in Dammam — any openings July 22–25, 2026?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Available dummy openings in Dammam (July 22–25, 2026, excluding Fri/Sat and dummy holidays):\n\n- Dammam Main (DMM-01): July 22 09:00, July 23 10:00\n- Dammam East (DMM-02): July 22 15:00, July 25 11:00\n\nIllustrative demo data. Confirm via Absher."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "name": "load_skill",
+                "args": {
+                  "skill_name": "appointment-slot-finder"
+                }
+              },
+              {
+                "name": "list_centers_by_city",
+                "args": {
+                  "city": "Dammam"
+                }
+              },
+              {
+                "name": "list_available_slots",
+                "args": {
+                  "center_ids": "DMM-01,DMM-02",
+                  "start_date": "2026-07-22",
+                  "end_date": "2026-07-25"
+                }
+              }
+            ],
+            "intermediate_responses": []
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "adk_app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "negative_routes_to_fee_draft",
+      "expected_skill": "government-fee-payment-draft",
+      "conversation": [
+        {
+          "invocation_id": "negative_routes_to_fee_draft",
+          "user_content": {
+            "parts": [
+              {
+                "text": "What's the total fee for my iqama renewal with three dependents?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Illustrative fee draft (dummy data):\n- Primary Iqama renewal: 650 SAR\n- Dependent renewals (3): 1,950 SAR\n- Subtotal: 2,600 SAR\n\nDraft only — does not submit payment. Verify via Absher/Muqeem/SADAD."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "name": "load_skill",
+                "args": {
+                  "skill_name": "government-fee-payment-draft"
+                }
+              },
+              {
+                "name": "get_fee_schedule",
+                "args": {}
+              }
+            ],
+            "intermediate_responses": []
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "adk_app",
+        "user_id": "eval_user",
+        "state": {}
+      },
+      "expected_skill_not": "appointment-slot-finder"
+    }
+  ]
+}

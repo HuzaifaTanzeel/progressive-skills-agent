@@ -1,0 +1,23 @@
+{
+  "violations": [
+    {
+      "code": "101",
+      "description": "Speeding 20 km/h over the limit",
+      "base_fine_sar": 300,
+      "early_payment_discount_pct": 50
+    },
+    {
+      "code": "205",
+      "description": "Running a red light",
+      "base_fine_sar": 500,
+      "early_payment_discount_pct": 25
+    },
+    {
+      "code": "310",
+      "description": "Illegal U-turn",
+      "base_fine_sar": 200,
+      "early_payment_discount_pct": 40
+    }
+  ],
+  "early_payment_window_days": 30
+}

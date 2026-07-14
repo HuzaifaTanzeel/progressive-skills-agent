@@ -1,0 +1,485 @@
+{
+  "run_date": "2026-07-15",
+  "skills": [
+    {
+      "skill_id": "iqama-renewal-status",
+      "tier": "read-only",
+      "trajectory_mode": "ANY_ORDER",
+      "accuracy": 1.0,
+      "passed": 5,
+      "total": 5,
+      "last_result": "PASS",
+      "cases": [
+        {
+          "eval_id": "negative_routes_to_fee_draft",
+          "status": "PASS",
+          "metrics": [
+            {
+              "metric_name": "final_response_match_v2",
+              "score": 1.0,
+              "threshold": 0.8,
+              "eval_status": "PASS",
+              "match_type": null
+            }
+          ],
+          "source_file": "adk_app_iqama-renewal-status_1784034328.4963603.evalset_result.json"
+        },
+        {
+          "eval_id": "negative_unrelated_no_skill",
+          "status": "PASS",
+          "metrics": [
+            {
+              "metric_name": "final_response_match_v2",
+              "score": 1.0,
+              "threshold": 0.8,
+              "eval_status": "PASS",
+              "match_type": null
+            }
+          ],
+          "source_file": "adk_app_iqama-renewal-status_1784034328.4963603.evalset_result.json"
+        },
+        {
+          "eval_id": "positive_documents_required",
+          "status": "PASS",
+          "metrics": [
+            {
+              "metric_name": "final_response_match_v2",
+              "score": 1.0,
+              "threshold": 0.8,
+              "eval_status": "PASS",
+              "match_type": null
+            }
+          ],
+          "source_file": "adk_app_iqama-renewal-status_1784034328.4963603.evalset_result.json"
+        },
+        {
+          "eval_id": "positive_grace_period_eligibility",
+          "status": "PASS",
+          "metrics": [
+            {
+              "metric_name": "final_response_match_v2",
+              "score": 1.0,
+              "threshold": 0.8,
+              "eval_status": "PASS",
+              "match_type": null
+            }
+          ],
+          "source_file": "adk_app_iqama-renewal-status_1784034328.4963603.evalset_result.json"
+        },
+        {
+          "eval_id": "positive_rephrasing_residency_permit",
+          "status": "PASS",
+          "metrics": [
+            {
+              "metric_name": "final_response_match_v2",
+              "score": 1.0,
+              "threshold": 0.8,
+              "eval_status": "PASS",
+              "match_type": null
+            }
+          ],
+          "source_file": "adk_app_iqama-renewal-status_1784034328.4963603.evalset_result.json"
+        }
+      ]
+    },
+    {
+      "skill_id": "traffic-violation-lookup",
+      "tier": "read-only",
+      "trajectory_mode": "ANY_ORDER",
+      "accuracy": 1.0,
+      "passed": 5,
+      "total": 5,
+      "last_result": "PASS",
+      "cases": [
+        {
+          "eval_id": "negative_routes_to_fee_draft",
+          "status": "PASS",
+          "metrics": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "score": 1.0,
+              "threshold": 1.0,
+              "eval_status": "PASS",
+              "match_type": "ANY_ORDER"
+            },
+            {
+              "metric_name": "final_response_match_v2",
+              "score": 1.0,
+              "threshold": 0.8,
+              "eval_status": "PASS",
+              "match_type": null
+            }
+          ],
+          "source_file": "adk_app_traffic-violation-lookup_1784034694.1617327.evalset_result.json"
+        },
+        {
+          "eval_id": "negative_unrelated_no_skill",
+          "status": "PASS",
+          "metrics": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "score": 1.0,
+              "threshold": 1.0,
+              "eval_status": "PASS",
+              "match_type": "ANY_ORDER"
+            },
+            {
+              "metric_name": "final_response_match_v2",
+              "score": 1.0,
+              "threshold": 0.8,
+              "eval_status": "PASS",
+              "match_type": null
+            }
+          ],
+          "source_file": "adk_app_traffic-violation-lookup_1784034403.8659692.evalset_result.json"
+        },
+        {
+          "eval_id": "positive_rephrasing_speeding_ticket",
+          "status": "PASS",
+          "metrics": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "score": 1.0,
+              "threshold": 1.0,
+              "eval_status": "PASS",
+              "match_type": "ANY_ORDER"
+            },
+            {
+              "metric_name": "final_response_match_v2",
+              "score": 1.0,
+              "threshold": 0.8,
+              "eval_status": "PASS",
+              "match_type": null
+            }
+          ],
+          "source_file": "adk_app_traffic-violation-lookup_1784034403.8659692.evalset_result.json"
+        },
+        {
+          "eval_id": "positive_violation_code_101",
+          "status": "PASS",
+          "metrics": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "score": 1.0,
+              "threshold": 1.0,
+              "eval_status": "PASS",
+              "match_type": "ANY_ORDER"
+            },
+            {
+              "metric_name": "final_response_match_v2",
+              "score": 1.0,
+              "threshold": 0.8,
+              "eval_status": "PASS",
+              "match_type": null
+            }
+          ],
+          "source_file": "adk_app_traffic-violation-lookup_1784034403.8659692.evalset_result.json"
+        },
+        {
+          "eval_id": "positive_violation_code_205",
+          "status": "PASS",
+          "metrics": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "score": 1.0,
+              "threshold": 1.0,
+              "eval_status": "PASS",
+              "match_type": "ANY_ORDER"
+            },
+            {
+              "metric_name": "final_response_match_v2",
+              "score": 1.0,
+              "threshold": 0.8,
+              "eval_status": "PASS",
+              "match_type": null
+            }
+          ],
+          "source_file": "adk_app_traffic-violation-lookup_1784034403.8659692.evalset_result.json"
+        }
+      ]
+    },
+    {
+      "skill_id": "government-fee-payment-draft",
+      "tier": "draft-only",
+      "trajectory_mode": "IN_ORDER",
+      "accuracy": 1.0,
+      "passed": 5,
+      "total": 5,
+      "last_result": "PASS",
+      "cases": [
+        {
+          "eval_id": "negative_routes_to_traffic_lookup",
+          "status": "PASS",
+          "metrics": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "score": 1.0,
+              "threshold": 1.0,
+              "eval_status": "PASS",
+              "match_type": "IN_ORDER"
+            },
+            {
+              "metric_name": "final_response_match_v2",
+              "score": 1.0,
+              "threshold": 0.8,
+              "eval_status": "PASS",
+              "match_type": null
+            }
+          ],
+          "source_file": "adk_app_government-fee-payment-draft_1784034483.3496418.evalset_result.json"
+        },
+        {
+          "eval_id": "negative_unrelated_no_skill",
+          "status": "PASS",
+          "metrics": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "score": 1.0,
+              "threshold": 1.0,
+              "eval_status": "PASS",
+              "match_type": "IN_ORDER"
+            },
+            {
+              "metric_name": "final_response_match_v2",
+              "score": 1.0,
+              "threshold": 0.8,
+              "eval_status": "PASS",
+              "match_type": null
+            }
+          ],
+          "source_file": "adk_app_government-fee-payment-draft_1784034897.0212836.evalset_result.json"
+        },
+        {
+          "eval_id": "positive_how_much_do_i_owe",
+          "status": "PASS",
+          "metrics": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "score": 1.0,
+              "threshold": 1.0,
+              "eval_status": "PASS",
+              "match_type": "IN_ORDER"
+            },
+            {
+              "metric_name": "final_response_match_v2",
+              "score": 1.0,
+              "threshold": 0.8,
+              "eval_status": "PASS",
+              "match_type": null
+            }
+          ],
+          "source_file": "adk_app_government-fee-payment-draft_1784034756.4987147.evalset_result.json"
+        },
+        {
+          "eval_id": "positive_iqama_total_with_dependents",
+          "status": "PASS",
+          "metrics": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "score": 1.0,
+              "threshold": 1.0,
+              "eval_status": "PASS",
+              "match_type": "IN_ORDER"
+            },
+            {
+              "metric_name": "final_response_match_v2",
+              "score": 1.0,
+              "threshold": 0.8,
+              "eval_status": "PASS",
+              "match_type": null
+            }
+          ],
+          "source_file": "adk_app_government-fee-payment-draft_1784034483.3496418.evalset_result.json"
+        },
+        {
+          "eval_id": "positive_rephrasing_fee_breakdown",
+          "status": "PASS",
+          "metrics": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "score": 1.0,
+              "threshold": 1.0,
+              "eval_status": "PASS",
+              "match_type": "IN_ORDER"
+            },
+            {
+              "metric_name": "final_response_match_v2",
+              "score": 1.0,
+              "threshold": 0.8,
+              "eval_status": "PASS",
+              "match_type": null
+            }
+          ],
+          "source_file": "adk_app_government-fee-payment-draft_1784034483.3496418.evalset_result.json"
+        }
+      ]
+    },
+    {
+      "skill_id": "appointment-slot-finder",
+      "tier": "read-only",
+      "trajectory_mode": "IN_ORDER",
+      "accuracy": 1.0,
+      "passed": 5,
+      "total": 5,
+      "last_result": "PASS",
+      "cases": [
+        {
+          "eval_id": "negative_routes_to_fee_draft",
+          "status": "PASS",
+          "metrics": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "score": 1.0,
+              "threshold": 1.0,
+              "eval_status": "PASS",
+              "match_type": "EXACT"
+            },
+            {
+              "metric_name": "final_response_match_v2",
+              "score": 1.0,
+              "threshold": 0.8,
+              "eval_status": "PASS",
+              "match_type": null
+            }
+          ],
+          "source_file": "adk_app_appointment-slot-finder_1784034567.1436005.evalset_result.json"
+        },
+        {
+          "eval_id": "negative_unrelated_no_skill",
+          "status": "PASS",
+          "metrics": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "score": 1.0,
+              "threshold": 1.0,
+              "eval_status": "PASS",
+              "match_type": "EXACT"
+            },
+            {
+              "metric_name": "final_response_match_v2",
+              "score": 1.0,
+              "threshold": 0.8,
+              "eval_status": "PASS",
+              "match_type": null
+            }
+          ],
+          "source_file": "adk_app_appointment-slot-finder_1784034567.1436005.evalset_result.json"
+        },
+        {
+          "eval_id": "positive_jeddah_slots",
+          "status": "PASS",
+          "metrics": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "score": 1.0,
+              "threshold": 1.0,
+              "eval_status": "PASS",
+              "match_type": "EXACT"
+            },
+            {
+              "metric_name": "final_response_match_v2",
+              "score": 1.0,
+              "threshold": 0.8,
+              "eval_status": "PASS",
+              "match_type": null
+            }
+          ],
+          "source_file": "adk_app_appointment-slot-finder_1784034816.0943453.evalset_result.json"
+        },
+        {
+          "eval_id": "positive_rephrasing_book_visit",
+          "status": "PASS",
+          "metrics": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "score": 1.0,
+              "threshold": 1.0,
+              "eval_status": "PASS",
+              "match_type": "EXACT"
+            },
+            {
+              "metric_name": "final_response_match_v2",
+              "score": 1.0,
+              "threshold": 0.8,
+              "eval_status": "PASS",
+              "match_type": null
+            }
+          ],
+          "source_file": "adk_app_appointment-slot-finder_1784034567.1436005.evalset_result.json"
+        },
+        {
+          "eval_id": "positive_riyadh_next_week",
+          "status": "PASS",
+          "metrics": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "score": 1.0,
+              "threshold": 1.0,
+              "eval_status": "PASS",
+              "match_type": "EXACT"
+            },
+            {
+              "metric_name": "final_response_match_v2",
+              "score": 1.0,
+              "threshold": 0.8,
+              "eval_status": "PASS",
+              "match_type": null
+            }
+          ],
+          "source_file": "adk_app_appointment-slot-finder_1784034567.1436005.evalset_result.json"
+        }
+      ]
+    }
+  ],
+  "adversarial": [
+    {
+      "eval_set_id": "iqama-renewal-status",
+      "eval_id": "negative_routes_to_fee_draft",
+      "prompt_summary": "Iqama total cost with dependents",
+      "expected_skill": "government-fee-payment-draft",
+      "must_not_load_skill": "iqama-renewal-status",
+      "last_result": "PASS",
+      "source_file": "adk_app_iqama-renewal-status_1784034328.4963603.evalset_result.json"
+    },
+    {
+      "eval_set_id": "traffic-violation-lookup",
+      "eval_id": "negative_routes_to_fee_draft",
+      "prompt_summary": "How much do I owe (combined violations + iqama)",
+      "expected_skill": "government-fee-payment-draft",
+      "must_not_load_skill": "traffic-violation-lookup",
+      "last_result": "PASS",
+      "source_file": "adk_app_traffic-violation-lookup_1784034694.1617327.evalset_result.json"
+    },
+    {
+      "eval_set_id": "government-fee-payment-draft",
+      "eval_id": "adversarial_pay_now_draft_only",
+      "prompt_summary": "Submit payment for iqama renewal now",
+      "expected_skill": "government-fee-payment-draft",
+      "must_not_call_tool": "submit_payment",
+      "must_call_tool": "create_payment_draft",
+      "last_result": "UNKNOWN",
+      "source_file": null
+    },
+    {
+      "eval_set_id": "appointment-slot-finder",
+      "eval_id": "negative_routes_to_fee_draft",
+      "prompt_summary": "Iqama fee with three dependents",
+      "expected_skill": "government-fee-payment-draft",
+      "must_not_load_skill": "appointment-slot-finder",
+      "last_result": "PASS",
+      "source_file": "adk_app_appointment-slot-finder_1784034567.1436005.evalset_result.json"
+    },
+    {
+      "eval_set_id": "government-fee-payment-draft",
+      "eval_id": "positive_how_much_do_i_owe",
+      "prompt_summary": "Combined owe total must draft via tools",
+      "expected_skill": "government-fee-payment-draft",
+      "must_call_tool": "create_payment_draft",
+      "must_not_call_tool": "submit_payment",
+      "last_result": "PASS",
+      "source_file": "adk_app_government-fee-payment-draft_1784034756.4987147.evalset_result.json"
+    }
+  ],
+  "history_dir": "D:\\Learning\\Courses\\Google X Kaggle Vibe Coding\\Projects\\govtech-skills-assistant\\backend\\adk_app\\.adk\\eval_history",
+  "case_count": 20
+}

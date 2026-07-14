@@ -1,0 +1,197 @@
+{
+  "eval_set_id": "iqama-renewal-status",
+  "name": "Iqama Renewal Status Eval Set",
+  "description": "Trigger-accuracy and L3 load_skill_resource trajectory checks for iqama-renewal-status.",
+  "eval_cases": [
+    {
+      "eval_id": "positive_documents_required",
+      "expected_skill": "iqama-renewal-status",
+      "conversation": [
+        {
+          "invocation_id": "positive_documents_required",
+          "user_content": {
+            "parts": [
+              {
+                "text": "What documents do I need to renew my iqama?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "For Iqama renewal (dummy demo rules), prepare:\n1. Valid passport copy\n2. Sponsor or employer letter confirming employment and sponsorship\n3. Medical fitness certificate from an approved clinic\n\nIllustrative dummy data only. Verify via Absher, Muqeem, or SADAD."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "name": "load_skill",
+                "args": {
+                  "skill_name": "iqama-renewal-status"
+                }
+              },
+              {
+                "name": "load_skill_resource",
+                "args": {
+                  "skill_name": "iqama-renewal-status",
+                  "file_path": "references/renewal_rules.md"
+                }
+              }
+            ],
+            "intermediate_responses": []
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "adk_app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "positive_grace_period_eligibility",
+      "expected_skill": "iqama-renewal-status",
+      "conversation": [
+        {
+          "invocation_id": "positive_grace_period_eligibility",
+          "user_content": {
+            "parts": [
+              {
+                "text": "My iqama expired 10 days ago. Can I still do a standard renewal?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Yes — under the dummy rules, expired 10 days ago is inside the 30-day grace window, so standard renewal still applies (documents, medical check, then a fee payment draft).\n\nIllustrative dummy data only. Verify via Absher/Muqeem/SADAD."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "name": "load_skill",
+                "args": {
+                  "skill_name": "iqama-renewal-status"
+                }
+              },
+              {
+                "name": "load_skill_resource",
+                "args": {
+                  "skill_name": "iqama-renewal-status",
+                  "file_path": "references/renewal_rules.md"
+                }
+              }
+            ],
+            "intermediate_responses": []
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "adk_app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "positive_rephrasing_residency_permit",
+      "expected_skill": "iqama-renewal-status",
+      "conversation": [
+        {
+          "invocation_id": "positive_rephrasing_residency_permit",
+          "user_content": {
+            "parts": [
+              {
+                "text": "What do I need to renew my residency permit?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "For residency permit / Iqama renewal (dummy demo rules), required documents are: valid passport copy; sponsor or employer letter; medical fitness certificate from an approved clinic.\n\nIllustrative dummy data only. Verify via Absher, Muqeem, or SADAD."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "name": "load_skill",
+                "args": {
+                  "skill_name": "iqama-renewal-status"
+                }
+              },
+              {
+                "name": "load_skill_resource",
+                "args": {
+                  "skill_name": "iqama-renewal-status",
+                  "file_path": "references/renewal_rules.md"
+                }
+              }
+            ],
+            "intermediate_responses": []
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "adk_app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "negative_routes_to_fee_draft",
+      "expected_skill": "government-fee-payment-draft",
+      "conversation": [
+        {
+          "invocation_id": "negative_routes_to_fee_draft",
+          "user_content": {
+            "parts": [
+              {
+                "text": "What is the total cost to renew my iqama with two dependents?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Illustrative fee draft (dummy data):\n- Primary Iqama renewal: 650 SAR\n- Dependent 1 renewal: 650 SAR\n- Dependent 2 renewal: 650 SAR\n- Subtotal: 1,950 SAR\n\nDraft only — does not submit payment. Verify via Absher/Muqeem/SADAD."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "name": "load_skill",
+                "args": {
+                  "skill_name": "government-fee-payment-draft"
+                }
+              },
+              {
+                "name": "get_fee_schedule",
+                "args": {}
+              }
+            ],
+            "intermediate_responses": []
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "adk_app",
+        "user_id": "eval_user",
+        "state": {}
+      },
+      "expected_skill_not": "iqama-renewal-status"
+    }
+  ]
+}

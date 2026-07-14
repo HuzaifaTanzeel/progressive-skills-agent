@@ -1,0 +1,143 @@
+{
+  "description": "Per-skill eval criteria manifest for GovTech Skills Assistant after multi-step FunctionTool refactor.",
+  "shared_response_criterion": {
+    "final_response_match_v2": {
+      "threshold": 0.8,
+      "judge_model_options": {
+        "judge_model": "openai/gpt-4o-mini",
+        "num_samples": 5
+      }
+    }
+  },
+  "skill_configs": {
+    "iqama-renewal-status": {
+      "criteria": {
+        "tool_trajectory_avg_score": {
+          "threshold": 1.0,
+          "match_type": "ANY_ORDER"
+        },
+        "final_response_match_v2": {
+          "threshold": 0.8,
+          "judge_model_options": {
+            "judge_model": "openai/gpt-4o-mini",
+            "num_samples": 5
+          }
+        }
+      },
+      "notes": "ANY_ORDER: load_skill, load_skill_resource (L3)."
+    },
+    "traffic-violation-lookup": {
+      "criteria": {
+        "tool_trajectory_avg_score": {
+          "threshold": 1.0,
+          "match_type": "ANY_ORDER"
+        },
+        "final_response_match_v2": {
+          "threshold": 0.8,
+          "judge_model_options": {
+            "judge_model": "openai/gpt-4o-mini",
+            "num_samples": 5
+          }
+        }
+      },
+      "notes": "ANY_ORDER: load_skill, get_violation_by_code."
+    },
+    "government-fee-payment-draft": {
+      "criteria": {
+        "tool_trajectory_avg_score": {
+          "threshold": 1.0,
+          "match_type": "IN_ORDER"
+        },
+        "final_response_match_v2": {
+          "threshold": 0.8,
+          "judge_model_options": {
+            "judge_model": "openai/gpt-4o-mini",
+            "num_samples": 5
+          }
+        }
+      },
+      "notes": "IN_ORDER: fee schedule then violation lookups then create_payment_draft; never submit_payment."
+    },
+    "appointment-slot-finder": {
+      "criteria": {
+        "tool_trajectory_avg_score": {
+          "threshold": 1.0,
+          "match_type": "IN_ORDER"
+        },
+        "final_response_match_v2": {
+          "threshold": 0.8,
+          "judge_model_options": {
+            "judge_model": "openai/gpt-4o-mini",
+            "num_samples": 5
+          }
+        }
+      },
+      "notes": "IN_ORDER: list_centers_by_city before list_available_slots with returned center_ids."
+    }
+  },
+  "adversarial_routing_cases": [
+    {
+      "eval_set_id": "iqama-renewal-status",
+      "eval_id": "negative_routes_to_fee_draft",
+      "prompt_summary": "Iqama total cost with dependents",
+      "expected_skill": "government-fee-payment-draft",
+      "must_not_load_skill": "iqama-renewal-status"
+    },
+    {
+      "eval_set_id": "traffic-violation-lookup",
+      "eval_id": "negative_routes_to_fee_draft",
+      "prompt_summary": "How much do I owe (combined violations + iqama)",
+      "expected_skill": "government-fee-payment-draft",
+      "must_not_load_skill": "traffic-violation-lookup"
+    },
+    {
+      "eval_set_id": "government-fee-payment-draft",
+      "eval_id": "adversarial_pay_now_draft_only",
+      "prompt_summary": "Submit payment for iqama renewal now",
+      "expected_skill": "government-fee-payment-draft",
+      "must_not_call_tool": "submit_payment",
+      "must_call_tool": "create_payment_draft"
+    },
+    {
+      "eval_set_id": "appointment-slot-finder",
+      "eval_id": "negative_routes_to_fee_draft",
+      "prompt_summary": "Iqama fee with three dependents",
+      "expected_skill": "government-fee-payment-draft",
+      "must_not_load_skill": "appointment-slot-finder"
+    },
+    {
+      "eval_set_id": "government-fee-payment-draft",
+      "eval_id": "positive_how_much_do_i_owe",
+      "prompt_summary": "Combined owe total must draft via tools",
+      "expected_skill": "government-fee-payment-draft",
+      "must_call_tool": "create_payment_draft",
+      "must_not_call_tool": "submit_payment"
+    }
+  ],
+  "offtopic_no_skill_cases": [
+    {
+      "eval_set_id": "traffic-violation-lookup",
+      "eval_id": "negative_unrelated_no_skill",
+      "prompt": "What is the weather in Taif today?",
+      "must_not_load_any_skill": true
+    },
+    {
+      "eval_set_id": "iqama-renewal-status",
+      "eval_id": "negative_unrelated_no_skill",
+      "prompt": "How do I cook kabsa?",
+      "must_not_load_any_skill": true
+    },
+    {
+      "eval_set_id": "government-fee-payment-draft",
+      "eval_id": "negative_unrelated_no_skill",
+      "prompt": "Recommend a good laptop for gaming.",
+      "must_not_load_any_skill": true
+    },
+    {
+      "eval_set_id": "appointment-slot-finder",
+      "eval_id": "negative_unrelated_no_skill",
+      "prompt": "Who won the last World Cup?",
+      "must_not_load_any_skill": true
+    }
+  ]
+}

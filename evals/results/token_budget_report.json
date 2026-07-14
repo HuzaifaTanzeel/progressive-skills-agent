@@ -1,0 +1,47 @@
+{
+  "run_date": "2026-07-15",
+  "encoding": "cl100k_base",
+  "comparison": {
+    "l1_index": 312,
+    "largest_l2_skill": "government-fee-payment-draft",
+    "largest_l2": 539,
+    "progressive": 851,
+    "monolithic": 2243,
+    "reduction_pct": 62.1,
+    "system_instruction": 167
+  },
+  "body_by_skill": {
+    "appointment-slot-finder": 355,
+    "government-fee-payment-draft": 539,
+    "iqama-renewal-status": 183,
+    "traffic-violation-lookup": 224
+  },
+  "ref_by_skill": {
+    "appointment-slot-finder": 557,
+    "government-fee-payment-draft": 0,
+    "iqama-renewal-status": 235,
+    "traffic-violation-lookup": 150
+  },
+  "per_skill": {
+    "appointment-slot-finder": {
+      "l2_body": 355,
+      "references": 557,
+      "combined": 912
+    },
+    "government-fee-payment-draft": {
+      "l2_body": 539,
+      "references": 0,
+      "combined": 539
+    },
+    "iqama-renewal-status": {
+      "l2_body": 183,
+      "references": 235,
+      "combined": 418
+    },
+    "traffic-violation-lookup": {
+      "l2_body": 224,
+      "references": 150,
+      "combined": 374
+    }
+  }
+}

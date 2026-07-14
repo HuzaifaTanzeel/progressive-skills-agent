@@ -1,0 +1,82 @@
+{
+  "run_date": "2026-07-14",
+  "order": [
+    "iqama-renewal-status",
+    "traffic-violation-lookup",
+    "government-fee-payment-draft",
+    "appointment-slot-finder"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "present_skills": ["iqama-renewal-status"],
+      "added_skill": null,
+      "cases_run": 4,
+      "passed": 3,
+      "skipped": 1,
+      "regressions": 0,
+      "passed_ids": {},
+      "failed_ids": {},
+      "skipped_cases": [
+        "iqama-renewal-status:negative_routes_to_fee_draft (needs ['government-fee-payment-draft'])"
+      ],
+      "regression_details": []
+    },
+    {
+      "step": 2,
+      "present_skills": [
+        "iqama-renewal-status",
+        "traffic-violation-lookup"
+      ],
+      "added_skill": "traffic-violation-lookup",
+      "cases_run": 8,
+      "passed": 8,
+      "skipped": 2,
+      "regressions": 0,
+      "passed_ids": {},
+      "failed_ids": {},
+      "skipped_cases": [
+        "iqama-renewal-status:negative_routes_to_fee_draft (needs ['government-fee-payment-draft'])",
+        "traffic-violation-lookup:negative_routes_to_fee_draft (needs ['government-fee-payment-draft'])"
+      ],
+      "regression_details": []
+    },
+    {
+      "step": 3,
+      "present_skills": [
+        "iqama-renewal-status",
+        "traffic-violation-lookup",
+        "government-fee-payment-draft"
+      ],
+      "added_skill": "government-fee-payment-draft",
+      "cases_run": 15,
+      "passed": 12,
+      "skipped": 0,
+      "regressions": 0,
+      "passed_ids": {},
+      "failed_ids": {},
+      "skipped_cases": [],
+      "regression_details": []
+    },
+    {
+      "step": 4,
+      "present_skills": [
+        "iqama-renewal-status",
+        "traffic-violation-lookup",
+        "government-fee-payment-draft",
+        "appointment-slot-finder"
+      ],
+      "added_skill": "appointment-slot-finder",
+      "cases_run": 20,
+      "passed": 17,
+      "skipped": 0,
+      "regressions": 0,
+      "passed_ids": {},
+      "failed_ids": {},
+      "skipped_cases": [],
+      "regression_details": []
+    }
+  ],
+  "total_regressions": 0,
+  "verdict": "0 unexpected regression(s)."
+}

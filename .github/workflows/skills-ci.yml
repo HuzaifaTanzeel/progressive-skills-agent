@@ -1,0 +1,59 @@
+name: skills-ci
+
+# Full EDD gate for Agent Skills. Requires repo secret OPENAI_API_KEY
+# (Settings → Secrets and variables → Actions). Without it, LLM steps fail
+# closed so silent skips cannot greenwash trajectory regressions.
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  skills-edd:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install backend package (pinned google-adk==2.4.0 via pyproject)
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Lint skills/*/SKILL.md frontmatter
+        run: python -m harness.lint_skills
+
+      - name: Phase 5 LLM eval suite (eval_config.json thresholds)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "::error::OPENAI_API_KEY repo secret is required for skills-ci. Add it under Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+          python -m pytest -m llm -v
+
+      - name: Incremental skill-library regression eval
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python -m harness.regression_eval
+
+      - name: Token budget report (always passes)
+        run: python -m harness.token_budget_report
+
+      - name: Upload token budget artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: token-budget-report
+          path: |
+            evals/results/token_budget_report.md
+            evals/results/token_budget_report.json

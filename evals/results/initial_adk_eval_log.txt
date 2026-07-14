@@ -1,0 +1,1922 @@
+
+========== iqama-renewal-status ((response only)) ==========
+.\.venv\Scripts\adk.exe : D:\Learning\Courses\Google X Kaggle Vibe 
+Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\google\adk\dependencies\vertexai.py:19: 
+UserWarning: The `vertexai.preview.rag` module is deprecated and will be removed in a future version. Please migrate 
+to the `agentplatform` client. For example:
+At C:\Users\Huzaifa Personal\AppData\Local\Temp\ps-script-1a2d09f4-ca7b-4e8b-b3ce-58c572d2f152.ps1:91 char:5
++     .\.venv\Scripts\adk.exe eval adk_app "..\evals\$($s.id).evalset.j ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\Learning\Cou...t. For example::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    import agentplatform
+    client = agentplatform.Client(project="your-project", location="us-central1")
+    client.rag.create_corpus(...)
+  from vertexai.preview import rag as rag
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\metric_evaluator_registry.py:114: UserWarning: [EXPERIMENTAL] MetricEvaluatorRegistry: This feature 
+is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at 
+any time.
+  metric_evaluator_registry = MetricEvaluatorRegistry()
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\local_eval_service.py:124: UserWarning: [EXPERIMENTAL] UserSimulatorProvider: This feature is 
+experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any 
+time.
+  user_simulator_provider: UserSimulatorProvider = UserSimulatorProvider(),
+D:\Learning\Courses\Google X Kaggle Vibe 
+Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\google\adk\cli\cli_tools_click.py:1111: 
+UserWarning: [EXPERIMENTAL] UserSimulatorProvider: This feature is experimental and may change or be removed in future 
+versions without notice. It may introduce breaking changes at any time.
+  user_simulator_provider = UserSimulatorProvider(
+D:\Learning\Courses\Google X Kaggle Vibe 
+Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\google\adk\cli\cli_tools_click.py:1134: 
+UserWarning: [EXPERIMENTAL] LocalEvalService: This feature is experimental and may change or be removed in future 
+versions without notice. It may introduce breaking changes at any time.
+  eval_service = LocalEvalService(
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\simulation\user_simulator_provider.py:77: UserWarning: [EXPERIMENTAL] StaticUserSimulator: This 
+feature is experimental and may change or be removed in future versions without notice. It may introduce breaking 
+changes at any time.
+  return StaticUserSimulator(static_conversation=eval_case.conversation)
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\simulation\static_user_simulator.py:39: UserWarning: [EXPERIMENTAL] UserSimulator: This feature is 
+experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any 
+time.
+  super().__init__(
+2026-07-14 18:04:33,674 - INFO - plugin_manager.py:119 - Plugin 'request_intercepter_plugin' registered.
+2026-07-14 18:04:33,675 - INFO - plugin_manager.py:119 - Plugin 'ensure_retry_options' registered.
+2026-07-14 18:04:33,681 - INFO - plugin_manager.py:119 - Plugin 'request_intercepter_plugin' registered.
+2026-07-14 18:04:33,681 - INFO - plugin_manager.py:119 - Plugin 'ensure_retry_options' registered.
+2026-07-14 18:04:33,683 - INFO - plugin_manager.py:119 - Plugin 'request_intercepter_plugin' registered.
+2026-07-14 18:04:33,683 - INFO - plugin_manager.py:119 - Plugin 'ensure_retry_options' registered.
+2026-07-14 18:04:33,684 - INFO - plugin_manager.py:119 - Plugin 'request_intercepter_plugin' registered.
+2026-07-14 18:04:33,685 - INFO - plugin_manager.py:119 - Plugin 'ensure_retry_options' registered.
+Using evaluation criteria: criteria={'final_response_match_v2': BaseCriterion(threshold=0.8, include_intermediate_responses_in_final=False, judge_model_options={'judge_model': 'openai/gpt-4o-mini', 'num_samples': 5})} custom_metrics=None user_simulator_config=None
+[92m18:04:41 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:41,168 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:04:41 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:04:41 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:04:41 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:41,169 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:41,169 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:41,170 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:04:43 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:43,075 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:04:43 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:43,076 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:04:43 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:43,219 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:04:43 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:43,572 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:04:44 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:44,095 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:04:44 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:44,155 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:04:44 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:44,173 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:04:45 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:45,227 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:04:45 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:45,603 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:04:45 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:45,755 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:04:47 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:47,051 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:48,257 - INFO - runners.py:2123 - Closing runner...
+2026-07-14 18:04:48,257 - INFO - runners.py:2099 - Closing toolset: SkillToolset
+2026-07-14 18:04:48,258 - INFO - runners.py:2102 - Successfully closed toolset: SkillToolset
+2026-07-14 18:04:48,258 - INFO - runners.py:2136 - Runner closed.
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\simulation\user_simulator_provider.py:77: UserWarning: [EXPERIMENTAL] StaticUserSimulator: This 
+feature is experimental and may change or be removed in future versions without notice. It may introduce breaking 
+changes at any time.
+  return StaticUserSimulator(static_conversation=eval_case.conversation)
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\simulation\static_user_simulator.py:39: UserWarning: [EXPERIMENTAL] UserSimulator: This feature is 
+experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any 
+time.
+  super().__init__(
+2026-07-14 18:04:48,260 - INFO - plugin_manager.py:119 - Plugin 'request_intercepter_plugin' registered.
+2026-07-14 18:04:48,260 - INFO - plugin_manager.py:119 - Plugin 'ensure_retry_options' registered.
+[92m18:04:48 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:48,269 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:48,597 - INFO - runners.py:2123 - Closing runner...
+2026-07-14 18:04:48,597 - INFO - runners.py:2099 - Closing toolset: SkillToolset
+2026-07-14 18:04:48,598 - INFO - runners.py:2102 - Successfully closed toolset: SkillToolset
+2026-07-14 18:04:48,598 - INFO - runners.py:2136 - Runner closed.
+2026-07-14 18:04:49,115 - INFO - runners.py:2123 - Closing runner...
+2026-07-14 18:04:49,115 - INFO - runners.py:2099 - Closing toolset: SkillToolset
+2026-07-14 18:04:49,115 - INFO - runners.py:2102 - Successfully closed toolset: SkillToolset
+2026-07-14 18:04:49,116 - INFO - runners.py:2136 - Runner closed.
+2026-07-14 18:04:49,992 - INFO - runners.py:2123 - Closing runner...
+2026-07-14 18:04:49,992 - INFO - runners.py:2099 - Closing toolset: SkillToolset
+2026-07-14 18:04:49,993 - INFO - runners.py:2102 - Successfully closed toolset: SkillToolset
+2026-07-14 18:04:49,993 - INFO - runners.py:2136 - Runner closed.
+[92m18:04:53 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:53,429 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:55,724 - INFO - runners.py:2123 - Closing runner...
+2026-07-14 18:04:55,725 - INFO - runners.py:2099 - Closing toolset: SkillToolset
+2026-07-14 18:04:55,725 - INFO - runners.py:2102 - Successfully closed toolset: SkillToolset
+2026-07-14 18:04:55,725 - INFO - runners.py:2136 - Runner closed.
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\metric_evaluator_registry.py:80: UserWarning: [EXPERIMENTAL] FinalResponseMatchV2Evaluator: This 
+feature is experimental and may change or be removed in future versions without notice. It may introduce breaking 
+changes at any time.
+  return evaluator_type(eval_metric=eval_metric)
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\final_response_match_v2.py:146: UserWarning: [EXPERIMENTAL] LlmAsJudge: This feature is experimental 
+and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  super().__init__(
+[92m18:04:55 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:55,765 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:04:55 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:55,770 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:04:55 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:04:55 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:55,772 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:55,775 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:04:58 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:58,283 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:04:58 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:58,532 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:04:59 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:59,055 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:04:59 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:04:59,773 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:05:00 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:05:00,948 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:05:01 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:05:01,562 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:05:02 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:05:02,380 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:05:03 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:05:03,097 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:05:03 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:05:03,987 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:05:04 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:05:04,673 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:05:05 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:05:05,657 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:05:06 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:05:06,371 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:05:07 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:05:07,704 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:05:08 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:05:08,830 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:05:08 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:05:08,871 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:05:09 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:05:09,984 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:05:11 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:05:11,313 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:05:13 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:05:13,492 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:05:15 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:05:15,171 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:05:19 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:05:19,604 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:05:24 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:05:24,951 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:05:28,496 - INFO - local_eval_set_results_manager.py:64 - Writing eval result to file: 
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\adk_app\.adk/eval_history\adk
+_app_iqama-renewal-status_1784034328.4963603.evalset_result.json
+*********************************************************************
+Eval Run Summary
+iqama-renewal-status:
+  Tests passed: 5
+  Tests failed: 0
+********************************************************************
+Eval Set Id: iqama-renewal-status
+Eval Id: positive_grace_period_eligibility
+Overall Eval Status: PASSED
+---------------------------------------------------------------------
+Metric: final_response_match_v2, Status: PASSED, Score: 1.0, Threshold: 0.8
+---------------------------------------------------------------------
+Invocation Details:
++----+---------------------------+---------------------------+---------------------------+-----------------------+---------------------------+---------------------------+
+|    | prompt                    | expected_response         | actual_response           | expected_tool_calls   | actual_tool_calls         | final_response_match_v2   |
++====+===========================+===========================+===========================+=======================+===========================+===========================+
+|  0 | My iqama expired 10 days  | Under this demo's         | Since your iqama expired  |                       | id='call_cSMUXfn9LcpqGPys | Status: PASSED, Score:    |
+|    | ago, can I still renew it | illustrative rules (not   | 10 days ago, you are      |                       | 2YDEfVCV' args={}         | 1.0                       |
+|    | or do I need to do        | real Saudi policy): if    | still within the grace    |                       | name='list_skills'        |                           |
+|    | something else first?     | your Iqama expired within | period of 30 days from    |                       | partial_args=None         |                           |
+|    |                           | the last 30 days,         | the expiry date, which    |                       | will_continue=None        |                           |
+|    |                           | standard renewal still    | means you can proceed     |                       | id='call_ZQWlfS2cfm0Fbp6T |                           |
+|    |                           | applies � you can proceed | with the standard renewal |                       | dEwGvsIE'                 |                           |
+|    |                           | with the normal renewal   | process without needing   |                       | args={'skill_name':       |                           |
+|    |                           | steps (documents, medical | to take any additional    |                       | 'iqama-renewal-status'}   |                           |
+|    |                           | check, fee payment draft) | steps.                    |                       | name='load_skill'         |                           |
+|    |                           | without a separate pre-   | ### Required Documents    |                       | partial_args=None         |                           |
+|    |                           | step. At 10 days past     | for Renewal (Illustrative |                       | will_continue=None        |                           |
+|    |                           | expiry, you are inside    | Dummy Data):              |                       | id='call_OLeqo0Z4yhnhfSMV |                           |
+|    |                           | that dummy 30-day grace   | 1. Valid passport copy    |                       | 9pwCXIKv'                 |                           |
+|    |                           | window.                   | 2. Sponsor or employer    |                       | args={'skill_name':       |                           |
+|    |                           | If expiry is beyond 30    | letter confirming         |                       | 'iqama-renewal-status',   |                           |
+|    |                           | days, the dummy process   | employment and            |                       | 'file_path': 'references/ |                           |
+|    |                           | changes: you may need an  | sponsorship               |                       | renewal_rules.md'} name=' |                           |
+|    |                           | exit-re-entry visa        | 3. Medical fitness        |                       | load_skill_resource'      |                           |
+|    |                           | arrangement or a          | certificate from an       |                       | partial_args=None         |                           |
+|    |                           | different corrective path | approved clinic           |                       | will_continue=None        |                           |
+|    |                           | before standard renewal   | ### Renewal Fees (Dummy   |                       |                           |                           |
+|    |                           | is available again.       | Data):                    |                       |                           |                           |
+|    |                           | This grace-period rule is | - Primary holder renewal: |                       |                           |                           |
+|    |                           | fictional demo data only. | 650 SAR                   |                       |                           |                           |
+|    |                           | Confirm your actual       | - Dependent renewal       |                       |                           |                           |
+|    |                           | status and options via    | (each): 650 SAR           |                       |                           |                           |
+|    |                           | Absher, Muqeem, or        | - Optional express        |                       |                           |                           |
+|    |                           | Jawazat official          | processing add-on: 100    |                       |                           |                           |
+|    |                           | channels.                 | SAR                       |                       |                           |                           |
+|    |                           |                           | You can simply follow the |                       |                           |                           |
+|    |                           |                           | normal renewal steps,     |                       |                           |                           |
+|    |                           |                           | which include gathering   |                       |                           |                           |
+|    |                           |                           | the required documents,   |                       |                           |                           |
+|    |                           |                           | undergoing a medical      |                       |                           |                           |
+|    |                           |                           | check, and preparing for  |                       |                           |                           |
+|    |                           |                           | fee payment.              |                       |                           |                           |
+|    |                           |                           | Please remember that all  |                       |                           |                           |
+|    |                           |                           | this information is       |                       |                           |                           |
+|    |                           |                           | illustrative. It�s        |                       |                           |                           |
+|    |                           |                           | crucial to verify any     |                       |                           |                           |
+|    |                           |                           | important details through |                       |                           |                           |
+|    |                           |                           | official channels such as |                       |                           |                           |
+|    |                           |                           | Absher, Muqeem, or SADAD. |                       |                           |                           |
++----+---------------------------+---------------------------+---------------------------+-----------------------+---------------------------+---------------------------+
+
+
+
+********************************************************************
+Eval Set Id: iqama-renewal-status
+Eval Id: negative_unrelated_no_skill
+Overall Eval Status: PASSED
+---------------------------------------------------------------------
+Metric: final_response_match_v2, Status: PASSED, Score: 1.0, Threshold: 0.8
+---------------------------------------------------------------------
+Invocation Details:
++----+--------------------------+---------------------------+---------------------------+-----------------------+---------------------+---------------------------+
+|    | prompt                   | expected_response         | actual_response           | expected_tool_calls   | actual_tool_calls   | final_response_match_v2   |
++====+==========================+===========================+===========================+=======================+=====================+===========================+
+|  0 | What's a good recipe for | I'm a Saudi citizen-      | I can't provide specific  |                       |                     | Status: PASSED, Score:    |
+|    | kabsa?                   | services demo assistant   | recipes as that falls     |                       |                     | 1.0                       |
+|    |                          | (Iqama info, traffic      | outside of my             |                       |                     |                           |
+|    |                          | violations, fee drafts,   | capabilities. However,    |                       |                     |                           |
+|    |                          | appointments) and can't   | for authentic recipes and |                       |                     |                           |
+|    |                          | help with cooking         | culinary advice, I        |                       |                     |                           |
+|    |                          | recipes. For food         | recommend checking        |                       |                     |                           |
+|    |                          | questions, try a cookbook | reputable cooking         |                       |                     |                           |
+|    |                          | or cooking site. If you   | websites or resources.    |                       |                     |                           |
+|    |                          | have a government-        | If you're looking for     |                       |                     |                           |
+|    |                          | services question, ask me | government services       |                       |                     |                           |
+|    |                          | � and remember this demo  | related to food, cooking  |                       |                     |                           |
+|    |                          | uses illustrative data    | classes, or cultural      |                       |                     |                           |
+|    |                          | only; verify anything     | programs, please let me   |                       |                     |                           |
+|    |                          | important via Absher,     | know! Always ensure to    |                       |                     |                           |
+|    |                          | Muqeem, or SADAD.         | verify any important      |                       |                     |                           |
+|    |                          |                           | information or resources  |                       |                     |                           |
+|    |                          |                           | through official          |                       |                     |                           |
+|    |                          |                           | channels.                 |                       |                     |                           |
++----+--------------------------+---------------------------+---------------------------+-----------------------+---------------------+---------------------------+
+
+
+
+********************************************************************
+Eval Set Id: iqama-renewal-status
+Eval Id: negative_routes_to_fee_draft
+Overall Eval Status: PASSED
+---------------------------------------------------------------------
+Metric: final_response_match_v2, Status: PASSED, Score: 1.0, Threshold: 0.8
+---------------------------------------------------------------------
+Invocation Details:
++----+---------------------------+--------------------------+---------------------------+---------------------------+---------------------------+---------------------------+
+|    | prompt                    | expected_response        | actual_response           | expected_tool_calls       | actual_tool_calls         | final_response_match_v2   |
++====+===========================+==========================+===========================+===========================+===========================+===========================+
+|  0 | How much will it cost me  | Illustrative total fee   | The estimated cost to     | id=None args={}           | id='call_gLAhgKUJK8ewJ5OX | Status: PASSED, Score:    |
+|    | in total to renew my      | draft (dummy data only � | renew your iqama along    | name='list_skills'        | vMYZG7Ky' args={}         | 1.0                       |
+|    | iqama, including fees for | not a real payment or    | with two dependents is as | partial_args=None         | name='list_skills'        |                           |
+|    | my two dependents?        | official quote):         | follows:                  | will_continue=None        | partial_args=None         |                           |
+|    |                           | - Primary Iqama renewal: | - **Primary Iqama         | id=None                   | will_continue=None        |                           |
+|    |                           | 650 SAR                  | Renewal:** 650 SAR        | args={'skill_name':       | id='call_y3bTJSHH0TKmn2SJ |                           |
+|    |                           | - Dependent 1 renewal:   | - **Dependent 1           | 'government-fee-payment-  | ssnow5lE'                 |                           |
+|    |                           | 650 SAR                  | Renewal:** 650 SAR        | draft'} name='load_skill' | args={'skill_name':       |                           |
+|    |                           | - Dependent 2 renewal:   | - **Dependent 2           | partial_args=None         | 'government-fee-payment-  |                           |
+|    |                           | 650 SAR                  | Renewal:** 650 SAR        | will_continue=None        | draft'} name='load_skill' |                           |
+|    |                           | - Subtotal renewals:     | ### **Total: 1950 SAR**   | id=None                   | partial_args=None         |                           |
+|    |                           | 1,950 SAR                | Please note that this is  | args={'skill_name':       | will_continue=None        |                           |
+|    |                           | - Optional express       | a draft estimate only and | 'government-fee-payment-  | id='call_eEwj2nCIllU5Kakw |                           |
+|    |                           | processing (dummy add-   | does not submit any       | draft', 'file_path': 'scr | zTWIkOso'                 |                           |
+|    |                           | on): 100 SAR             | payment. For any official | ipts/compute_fees.py',    | args={'skill_name':       |                           |
+|    |                           | - Estimated total: 2,050 | actions or confirmations, | 'args': {'request-type':  | 'government-fee-payment-  |                           |
+|    |                           | SAR                      | make sure to verify the   | 'iqama_renewal',          | draft', 'file_path': 'scr |                           |
+|    |                           | This is a draft fee      | details via official      | 'dependents': '2'}}       | ipts/compute_fees.py',    |                           |
+|    |                           | summary for planning     | channels like Absher,     | name='run_skill_script'   | 'args': {'request-type':  |                           |
+|    |                           | purposes. It does not    | Muqeem, or SADAD.         | partial_args=None         | 'iqama_renewal',          |                           |
+|    |                           | submit payment. Verify   |                           | will_continue=None        | 'dependents': '2'}}       |                           |
+|    |                           | all amounts on           |                           |                           | name='run_skill_script'   |                           |
+|    |                           | Absher/Muqeem/SADAD      |                           |                           | partial_args=None         |                           |
+|    |                           | before paying.           |                           |                           | will_continue=None        |                           |
++----+---------------------------+--------------------------+---------------------------+---------------------------+---------------------------+---------------------------+
+
+
+
+********************************************************************
+Eval Set Id: iqama-renewal-status
+Eval Id: positive_documents_required
+Overall Eval Status: PASSED
+---------------------------------------------------------------------
+Metric: final_response_match_v2, Status: PASSED, Score: 1.0, Threshold: 0.8
+---------------------------------------------------------------------
+Invocation Details:
++----+--------------------------+---------------------------+---------------------------+-----------------------+---------------------------+---------------------------+
+|    | prompt                   | expected_response         | actual_response           | expected_tool_calls   | actual_tool_calls         | final_response_match_v2   |
++====+==========================+===========================+===========================+=======================+===========================+===========================+
+|  0 | What documents do I need | For a standard Iqama      | To renew your iqama, you  |                       | id='call_NNoAByy2jdsczn4e | Status: PASSED, Score:    |
+|    | to renew my iqama?       | renewal (illustrative     | will need the following   |                       | Nn3mFBQb' args={}         | 1.0                       |
+|    |                          | dummy guidance only � not | documents (please note    |                       | name='list_skills'        |                           |
+|    |                          | real government           | that this information is  |                       | partial_args=None         |                           |
+|    |                          | requirements), you would  | illustrative dummy        |                       | will_continue=None        |                           |
+|    |                          | typically prepare: (1) a  | content):                 |                       | id='call_Ke41xpyeFM0UnFpo |                           |
+|    |                          | valid passport copy, (2)  | 1. Valid passport copy    |                       | mdkbbkiZ'                 |                           |
+|    |                          | a sponsor or employer     | 2. Sponsor or employer    |                       | args={'skill_name':       |                           |
+|    |                          | letter confirming         | letter confirming         |                       | 'iqama-renewal-status'}   |                           |
+|    |                          | employment and            | employment and            |                       | name='load_skill'         |                           |
+|    |                          | sponsorship, (3) a        | sponsorship               |                       | partial_args=None         |                           |
+|    |                          | medical fitness           | 3. Medical fitness        |                       | will_continue=None        |                           |
+|    |                          | certificate from an       | certificate from an       |                       | id='call_lHMJETIMrAhJYeKs |                           |
+|    |                          | approved clinic, and (4)  | approved clinic           |                       | 5De5btxV'                 |                           |
+|    |                          | payment per the dummy     | Additionally, it's        |                       | args={'skill_name':       |                           |
+|    |                          | renewal fee table below.  | important to verify this  |                       | 'iqama-renewal-status',   |                           |
+|    |                          | Dummy renewal fee table   | information through       |                       | 'file_path': 'references/ |                           |
+|    |                          | (SAR, illustrative only): | official channels such as |                       | renewal_rules.md'} name=' |                           |
+|    |                          | - Primary holder renewal: | Absher, Muqeem, or SADAD. |                       | load_skill_resource'      |                           |
+|    |                          | 650                       |                           |                       | partial_args=None         |                           |
+|    |                          | - Dependent renewal: 650  |                           |                       | will_continue=None        |                           |
+|    |                          | each                      |                           |                       |                           |                           |
+|    |                          | - Optional express        |                           |                       |                           |                           |
+|    |                          | processing add-on: 100    |                           |                       |                           |                           |
+|    |                          | These amounts and         |                           |                       |                           |                           |
+|    |                          | document lists are dummy  |                           |                       |                           |                           |
+|    |                          | data for demo purposes.   |                           |                       |                           |                           |
+|    |                          | Always verify current     |                           |                       |                           |                           |
+|    |                          | requirements, fees, and   |                           |                       |                           |                           |
+|    |                          | steps via official        |                           |                       |                           |                           |
+|    |                          | channels such as Absher,  |                           |                       |                           |                           |
+|    |                          | Muqeem, or SADAD before   |                           |                       |                           |                           |
+|    |                          | taking any action.        |                           |                       |                           |                           |
++----+--------------------------+---------------------------+---------------------------+-----------------------+---------------------------+---------------------------+
+
+
+
+********************************************************************
+Eval Set Id: iqama-renewal-status
+Eval Id: positive_rephrasing_residency_permit
+Overall Eval Status: PASSED
+---------------------------------------------------------------------
+Metric: final_response_match_v2, Status: PASSED, Score: 1.0, Threshold: 0.8
+---------------------------------------------------------------------
+Invocation Details:
++----+---------------------------+---------------------------+---------------------------+-----------------------+---------------------------+---------------------------+
+|    | prompt                    | expected_response         | actual_response           | expected_tool_calls   | actual_tool_calls         | final_response_match_v2   |
++====+===========================+===========================+===========================+=======================+===========================+===========================+
+|  0 | My residency permit is    | For a residency permit    | To renew your residency   |                       | id='call_FWO7uEibgqTSM6n2 | Status: PASSED, Score:    |
+|    | about to run out next     | (Iqama) that is about to  | permit (Iqama), here�s an |                       | X2tUAw1v' args={}         | 1.0                       |
+|    | month, what's the renewal | run out, the illustrative | overview of the process   |                       | name='list_skills'        |                           |
+|    | process?                  | renewal process in this   | based on illustrative     |                       | partial_args=None         |                           |
+|    |                           | demo is: (1) gather       | rules:                    |                       | will_continue=None        |                           |
+|    |                           | documents � passport      | ### Required Documents    |                       | id='call_WjGEnjP92JAu3ZEV |                           |
+|    |                           | copy, sponsor/employer    | (Dummy Data)              |                       | kSnfkoml'                 |                           |
+|    |                           | letter, medical fitness   | 1. **Valid passport       |                       | args={'skill_name':       |                           |
+|    |                           | certificate; (2) check    | copy**                    |                       | 'iqama-renewal-status'}   |                           |
+|    |                           | eligibility timing (dummy | 2. **Sponsor or employer  |                       | name='load_skill'         |                           |
+|    |                           | rule: renew within 30     | letter** confirming your  |                       | partial_args=None         |                           |
+|    |                           | days before expiry or     | employment and            |                       | will_continue=None        |                           |
+|    |                           | within 30 days after      | sponsorship               |                       | id='call_lymQYQZArOnUR0jz |                           |
+|    |                           | expiry for standard       | 3. **Medical fitness      |                       | bWtkXNPR'                 |                           |
+|    |                           | renewal); (3) review the  | certificate** from an     |                       | args={'skill_name':       |                           |
+|    |                           | dummy fee table; (4)      | approved clinic           |                       | 'iqama-renewal-status',   |                           |
+|    |                           | submit through official   | ### Renewal Process       |                       | 'file_path': 'references/ |                           |
+|    |                           | channels when ready.      | - If your permit is       |                       | renewal_rules.md'} name=' |                           |
+|    |                           | Dummy renewal fee table   | within **30 days of       |                       | load_skill_resource'      |                           |
+|    |                           | (illustrative): primary   | expiry**, you can proceed |                       | partial_args=None         |                           |
+|    |                           | holder 650 SAR;           | with normal renewal steps |                       | will_continue=None        |                           |
+|    |                           | dependents 650 SAR each.  | using the above           |                       |                           |                           |
+|    |                           | All steps and fees here   | documents, including a    |                       |                           |                           |
+|    |                           | are dummy demo data, not  | medical check and fee     |                       |                           |                           |
+|    |                           | official instructions.    | payment draft.            |                       |                           |                           |
+|    |                           | Verify via Absher,        | ### Grace Period Rule     |                       |                           |                           |
+|    |                           | Muqeem, or SADAD.         | (Dummy Data)              |                       |                           |                           |
+|    |                           |                           | - If your Iqama has       |                       |                           |                           |
+|    |                           |                           | expired for **less than   |                       |                           |                           |
+|    |                           |                           | 30 days**, you can still  |                       |                           |                           |
+|    |                           |                           | renew normally.           |                       |                           |                           |
+|    |                           |                           | - If it has been **more   |                       |                           |                           |
+|    |                           |                           | than 30 days**, different |                       |                           |                           |
+|    |                           |                           | corrective actions might  |                       |                           |                           |
+|    |                           |                           | be needed before you can  |                       |                           |                           |
+|    |                           |                           | renew.                    |                       |                           |                           |
+|    |                           |                           | ### Fees (Dummy Table)    |                       |                           |                           |
+|    |                           |                           | - Primary holder renewal: |                       |                           |                           |
+|    |                           |                           | **650 SAR**               |                       |                           |                           |
+|    |                           |                           | - Dependent renewal       |                       |                           |                           |
+|    |                           |                           | (each): **650 SAR**       |                       |                           |                           |
+|    |                           |                           | - Optional express        |                       |                           |                           |
+|    |                           |                           | processing add-on: **100  |                       |                           |                           |
+|    |                           |                           | SAR**                     |                       |                           |                           |
+|    |                           |                           | Please remember, all the  |                       |                           |                           |
+|    |                           |                           | information provided here |                       |                           |                           |
+|    |                           |                           | is illustrative dummy     |                       |                           |                           |
+|    |                           |                           | data. Always verify       |                       |                           |                           |
+|    |                           |                           | important details via     |                       |                           |                           |
+|    |                           |                           | official channels such as |                       |                           |                           |
+|    |                           |                           | Absher, Muqeem, or SADAD. |                       |                           |                           |
++----+---------------------------+---------------------------+---------------------------+-----------------------+---------------------------+---------------------------+
+
+
+
+
+========== traffic-violation-lookup (ANY_ORDER) ==========
+.\.venv\Scripts\adk.exe : D:\Learning\Courses\Google X Kaggle Vibe 
+Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\google\adk\dependencies\vertexai.py:19: 
+UserWarning: The `vertexai.preview.rag` module is deprecated and will be removed in a future version. Please migrate 
+to the `agentplatform` client. For example:
+At C:\Users\Huzaifa Personal\AppData\Local\Temp\ps-script-1a2d09f4-ca7b-4e8b-b3ce-58c572d2f152.ps1:91 char:5
++     .\.venv\Scripts\adk.exe eval adk_app "..\evals\$($s.id).evalset.j ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\Learning\Cou...t. For example::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    import agentplatform
+    client = agentplatform.Client(project="your-project", location="us-central1")
+    client.rag.create_corpus(...)
+  from vertexai.preview import rag as rag
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\metric_evaluator_registry.py:114: UserWarning: [EXPERIMENTAL] MetricEvaluatorRegistry: This feature 
+is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at 
+any time.
+  metric_evaluator_registry = MetricEvaluatorRegistry()
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\local_eval_service.py:124: UserWarning: [EXPERIMENTAL] UserSimulatorProvider: This feature is 
+experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any 
+time.
+  user_simulator_provider: UserSimulatorProvider = UserSimulatorProvider(),
+D:\Learning\Courses\Google X Kaggle Vibe 
+Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\google\adk\cli\cli_tools_click.py:1111: 
+UserWarning: [EXPERIMENTAL] UserSimulatorProvider: This feature is experimental and may change or be removed in future 
+versions without notice. It may introduce breaking changes at any time.
+  user_simulator_provider = UserSimulatorProvider(
+D:\Learning\Courses\Google X Kaggle Vibe 
+Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\google\adk\cli\cli_tools_click.py:1134: 
+UserWarning: [EXPERIMENTAL] LocalEvalService: This feature is experimental and may change or be removed in future 
+versions without notice. It may introduce breaking changes at any time.
+  eval_service = LocalEvalService(
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\simulation\user_simulator_provider.py:77: UserWarning: [EXPERIMENTAL] StaticUserSimulator: This 
+feature is experimental and may change or be removed in future versions without notice. It may introduce breaking 
+changes at any time.
+  return StaticUserSimulator(static_conversation=eval_case.conversation)
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\simulation\static_user_simulator.py:39: UserWarning: [EXPERIMENTAL] UserSimulator: This feature is 
+experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any 
+time.
+  super().__init__(
+2026-07-14 18:05:55,944 - INFO - plugin_manager.py:119 - Plugin 'request_intercepter_plugin' registered.
+2026-07-14 18:05:55,945 - INFO - plugin_manager.py:119 - Plugin 'ensure_retry_options' registered.
+2026-07-14 18:05:55,953 - INFO - plugin_manager.py:119 - Plugin 'request_intercepter_plugin' registered.
+2026-07-14 18:05:55,953 - INFO - plugin_manager.py:119 - Plugin 'ensure_retry_options' registered.
+2026-07-14 18:05:55,955 - INFO - plugin_manager.py:119 - Plugin 'request_intercepter_plugin' registered.
+2026-07-14 18:05:55,956 - INFO - plugin_manager.py:119 - Plugin 'ensure_retry_options' registered.
+2026-07-14 18:05:55,957 - INFO - plugin_manager.py:119 - Plugin 'request_intercepter_plugin' registered.
+2026-07-14 18:05:55,957 - INFO - plugin_manager.py:119 - Plugin 'ensure_retry_options' registered.
+Using evaluation criteria: criteria={'tool_trajectory_avg_score': BaseCriterion(threshold=1.0, include_intermediate_responses_in_final=False, match_type='ANY_ORDER'), 'final_response_match_v2': BaseCriterion(threshold=0.8, include_intermediate_responses_in_final=False, judge_model_options={'judge_model': 'openai/gpt-4o-mini', 'num_samples': 5})} custom_metrics=None user_simulator_config=None
+[92m18:06:03 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:03,737 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:03 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:03,738 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:03 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:03,740 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:03 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:03,741 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:05 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:05,426 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:05 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:05,682 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:05,699 - INFO - runners.py:2123 - Closing runner...
+2026-07-14 18:06:05,700 - INFO - runners.py:2099 - Closing toolset: SkillToolset
+2026-07-14 18:06:05,700 - INFO - runners.py:2102 - Successfully closed toolset: SkillToolset
+2026-07-14 18:06:05,700 - INFO - runners.py:2136 - Runner closed.
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\simulation\user_simulator_provider.py:77: UserWarning: [EXPERIMENTAL] StaticUserSimulator: This 
+feature is experimental and may change or be removed in future versions without notice. It may introduce breaking 
+changes at any time.
+  return StaticUserSimulator(static_conversation=eval_case.conversation)
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\simulation\static_user_simulator.py:39: UserWarning: [EXPERIMENTAL] UserSimulator: This feature is 
+experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any 
+time.
+  super().__init__(
+2026-07-14 18:06:05,701 - INFO - plugin_manager.py:119 - Plugin 'request_intercepter_plugin' registered.
+2026-07-14 18:06:05,701 - INFO - plugin_manager.py:119 - Plugin 'ensure_retry_options' registered.
+[92m18:06:05 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:05,711 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:05 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:05,948 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:06 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:06,698 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:07 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:07,032 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:07 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:07,158 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:07 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:07,282 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:07 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:07,691 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:08,681 - INFO - runners.py:2123 - Closing runner...
+2026-07-14 18:06:08,681 - INFO - runners.py:2099 - Closing toolset: SkillToolset
+2026-07-14 18:06:08,681 - INFO - runners.py:2102 - Successfully closed toolset: SkillToolset
+2026-07-14 18:06:08,681 - INFO - runners.py:2136 - Runner closed.
+[92m18:06:16 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:16,316 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:16 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:16,441 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:17 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:17,031 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:18,030 - INFO - runners.py:2123 - Closing runner...
+2026-07-14 18:06:18,030 - INFO - runners.py:2099 - Closing toolset: SkillToolset
+2026-07-14 18:06:18,031 - INFO - runners.py:2102 - Successfully closed toolset: SkillToolset
+2026-07-14 18:06:18,031 - INFO - runners.py:2136 - Runner closed.
+2026-07-14 18:06:18,036 - INFO - runners.py:2123 - Closing runner...
+2026-07-14 18:06:18,036 - INFO - runners.py:2099 - Closing toolset: SkillToolset
+2026-07-14 18:06:18,036 - INFO - runners.py:2102 - Successfully closed toolset: SkillToolset
+2026-07-14 18:06:18,037 - INFO - runners.py:2136 - Runner closed.
+2026-07-14 18:06:18,981 - INFO - runners.py:2123 - Closing runner...
+2026-07-14 18:06:18,982 - INFO - runners.py:2099 - Closing toolset: SkillToolset
+2026-07-14 18:06:18,982 - INFO - runners.py:2102 - Successfully closed toolset: SkillToolset
+2026-07-14 18:06:18,982 - INFO - runners.py:2136 - Runner closed.
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\metric_evaluator_registry.py:80: UserWarning: [EXPERIMENTAL] FinalResponseMatchV2Evaluator: This 
+feature is experimental and may change or be removed in future versions without notice. It may introduce breaking 
+changes at any time.
+  return evaluator_type(eval_metric=eval_metric)
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\final_response_match_v2.py:146: UserWarning: [EXPERIMENTAL] LlmAsJudge: This feature is experimental 
+and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  super().__init__(
+[92m18:06:19 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:19,005 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:19 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:19,012 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:19 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:19,022 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:19 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:19,029 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:21 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:21,638 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:21 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:21,644 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:21 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:21,825 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:22 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:22,017 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:24 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:24,514 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:24 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:24,652 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:24 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:24,914 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:25 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:25,700 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:26 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:26,822 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:26 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:26,847 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:27 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:27,892 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:28 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:28,525 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:29 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:29,637 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:30 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:30,851 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:30 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:30,965 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:31 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:31,978 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:32 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:32,573 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:35 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:35,055 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:37 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:37,708 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:40 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:40,139 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:06:42 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:42,321 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:06:43,866 - INFO - local_eval_set_results_manager.py:64 - Writing eval result to file: 
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\adk_app\.adk/eval_history\adk
+_app_traffic-violation-lookup_1784034403.8659692.evalset_result.json
+*********************************************************************
+Eval Run Summary
+traffic-violation-lookup:
+  Tests passed: 4
+  Tests failed: 1
+********************************************************************
+Eval Set Id: traffic-violation-lookup
+Eval Id: negative_unrelated_no_skill
+Overall Eval Status: PASSED
+---------------------------------------------------------------------
+Metric: tool_trajectory_avg_score, Status: PASSED, Score: 1.0, Threshold: 1.0
+---------------------------------------------------------------------
+Metric: final_response_match_v2, Status: PASSED, Score: 1.0, Threshold: 0.8
+---------------------------------------------------------------------
+Invocation Details:
++----+-------------------------+-------------------------+---------------------------+-----------------------+---------------------+-----------------------------+---------------------------+
+|    | prompt                  | expected_response       | actual_response           | expected_tool_calls   | actual_tool_calls   | tool_trajectory_avg_score   | final_response_match_v2   |
++====+=========================+=========================+===========================+=======================+=====================+=============================+===========================+
+|  0 | What's the weather like | I'm a Saudi citizen-    | I'm unable to provide     |                       |                     | Status: PASSED, Score:      | Status: PASSED, Score:    |
+|    | in Taif today?          | services demo assistant | real-time weather         |                       |                     | 1.0                         | 1.0                       |
+|    |                         | (Iqama, traffic         | updates. I recommend      |                       |                     |                             |                           |
+|    |                         | violations, fee drafts, | checking a reliable       |                       |                     |                             |                           |
+|    |                         | appointments) and can't | weather website or        |                       |                     |                             |                           |
+|    |                         | help with weather       | application for the       |                       |                     |                             |                           |
+|    |                         | forecasts. For weather, | latest information on the |                       |                     |                             |                           |
+|    |                         | try a weather app or    | weather in Taif. You can  |                       |                     |                             |                           |
+|    |                         | site. If you have a     | also verify anything      |                       |                     |                             |                           |
+|    |                         | government-services     | important via official    |                       |                     |                             |                           |
+|    |                         | question, ask me � and  | channels.                 |                       |                     |                             |                           |
+|    |                         | remember this demo uses |                           |                       |                     |                             |                           |
+|    |                         | illustrative data only. |                           |                       |                     |                             |                           |
++----+-------------------------+-------------------------+---------------------------+-----------------------+---------------------+-----------------------------+---------------------------+
+
+
+
+********************************************************************
+Eval Set Id: traffic-violation-lookup
+Eval Id: positive_violation_code_101
+Overall Eval Status: PASSED
+---------------------------------------------------------------------
+Metric: tool_trajectory_avg_score, Status: PASSED, Score: 1.0, Threshold: 1.0
+---------------------------------------------------------------------
+Metric: final_response_match_v2, Status: PASSED, Score: 1.0, Threshold: 0.8
+---------------------------------------------------------------------
+Invocation Details:
++----+------------------------+---------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+|    | prompt                 | expected_response         | actual_response           | expected_tool_calls       | actual_tool_calls         | tool_trajectory_avg_score   | final_response_match_v2   |
++====+========================+===========================+===========================+===========================+===========================+=============================+===========================+
+|  0 | What is the fine for   | Violation code 101 (dummy | The traffic violation     | id=None args={}           | id='call_VR55dYMvkctOnE1r | Status: PASSED, Score:      | Status: PASSED, Score:    |
+|    | traffic violation code | data): Speeding 20 km/h   | code **101** corresponds  | name='list_skills'        | ZprYLfI4' args={}         | 1.0                         | 1.0                       |
+|    | 101?                   | over the limit. Base      | to the following:         | partial_args=None         | name='list_skills'        |                             |                           |
+|    |                        | fine: 300 SAR. With the   | - **Description:**        | will_continue=None        | partial_args=None         |                             |                           |
+|    |                        | illustrative 50% early-   | Speeding 20 km/h over the | id=None                   | will_continue=None        |                             |                           |
+|    |                        | payment discount, the     | limit                     | args={'skill_name':       | id='call_9B6GiflTLNedUTxI |                             |                           |
+|    |                        | discounted fine is 150    | - **Base Fine:** 300 SAR  | 'traffic-violation-       | GXssQdCn'                 |                             |                           |
+|    |                        | SAR if paid within the    | - **Discounted Early-     | lookup'}                  | args={'skill_name':       |                             |                           |
+|    |                        | dummy early-payment       | Payment Fine:** 150 SAR   | name='load_skill'         | 'traffic-violation-       |                             |                           |
+|    |                        | window.                   | (if paid within 30 days)  | partial_args=None         | lookup'}                  |                             |                           |
+|    |                        | This is demo data only �  | Please make sure to       | will_continue=None        | name='load_skill'         |                             |                           |
+|    |                        | not a real violation      | verify this information   | id=None                   | partial_args=None         |                             |                           |
+|    |                        | record or payment quote.  | via official channels     | args={'skill_name':       | will_continue=None        |                             |                           |
+|    |                        | Verify any actual fines   | like Absher, Muqeem, or   | 'traffic-violation-       | id='call_qp7hA7kkxcTKvAxV |                             |                           |
+|    |                        | via official channels     | SADAD.                    | lookup', 'file_path': 'sc | l0devOX2'                 |                             |                           |
+|    |                        | (Absher, SADAD).          |                           | ripts/lookup_violation.py | args={'skill_name':       |                             |                           |
+|    |                        |                           |                           | ', 'args': {'code':       | 'traffic-violation-       |                             |                           |
+|    |                        |                           |                           | '101'}}                   | lookup', 'file_path': 'sc |                             |                           |
+|    |                        |                           |                           | name='run_skill_script'   | ripts/lookup_violation.py |                             |                           |
+|    |                        |                           |                           | partial_args=None         | ', 'args': {'code':       |                             |                           |
+|    |                        |                           |                           | will_continue=None        | '101'}}                   |                             |                           |
+|    |                        |                           |                           |                           | name='run_skill_script'   |                             |                           |
+|    |                        |                           |                           |                           | partial_args=None         |                             |                           |
+|    |                        |                           |                           |                           | will_continue=None        |                             |                           |
++----+------------------------+---------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+
+
+
+********************************************************************
+Eval Set Id: traffic-violation-lookup
+Eval Id: positive_rephrasing_speeding_ticket
+Overall Eval Status: PASSED
+---------------------------------------------------------------------
+Metric: tool_trajectory_avg_score, Status: PASSED, Score: 1.0, Threshold: 1.0
+---------------------------------------------------------------------
+Metric: final_response_match_v2, Status: PASSED, Score: 1.0, Threshold: 0.8
+---------------------------------------------------------------------
+Invocation Details:
++----+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+|    | prompt                    | expected_response         | actual_response           | expected_tool_calls       | actual_tool_calls         | tool_trajectory_avg_score   | final_response_match_v2   |
++====+===========================+===========================+===========================+===========================+===========================+=============================+===========================+
+|  0 | I got a speeding ticket � | For violation code 101    | For violation code        | id=None args={}           | id='call_PbBPkfY2gOfoOTzX | Status: PASSED, Score:      | Status: PASSED, Score:    |
+|    | what's the penalty for    | (dummy speeding ticket):  | **101**, which            | name='list_skills'        | dWXQu6kS' args={}         | 1.0                         | 1.0                       |
+|    | code 101 if I pay early?  | Speeding 20 km/h over the | corresponds to **Speeding | partial_args=None         | name='list_skills'        |                             |                           |
+|    |                           | limit. Base fine 300 SAR; | 20 km/h over the limit**, | will_continue=None        | partial_args=None         |                             |                           |
+|    |                           | early-payment discounted  | the base fine is **300    | id=None                   | will_continue=None        |                             |                           |
+|    |                           | fine 150 SAR (50% dummy   | SAR**. However, if you    | args={'skill_name':       | id='call_ElNrucKT7qmq7ZXD |                             |                           |
+|    |                           | discount).                | pay the fine early, you   | 'traffic-violation-       | magHKopO'                 |                             |                           |
+|    |                           | Illustrative demo data    | can benefit from a 50%    | lookup'}                  | args={'skill_name':       |                             |                           |
+|    |                           | only. Confirm real        | discount, reducing your   | name='load_skill'         | 'traffic-violation-       |                             |                           |
+|    |                           | amounts via Absher or     | fine to **150 SAR**.      | partial_args=None         | lookup'}                  |                             |                           |
+|    |                           | SADAD.                    | Please remember that      | will_continue=None        | name='load_skill'         |                             |                           |
+|    |                           |                           | these amounts are for     | id=None                   | partial_args=None         |                             |                           |
+|    |                           |                           | illustrative purposes     | args={'skill_name':       | will_continue=None        |                             |                           |
+|    |                           |                           | only. I recommend         | 'traffic-violation-       | id='call_HvPzR1xbB9mjjV1s |                             |                           |
+|    |                           |                           | verifying any important   | lookup', 'file_path': 'sc | BomapGaq'                 |                             |                           |
+|    |                           |                           | details through official  | ripts/lookup_violation.py | args={'skill_name':       |                             |                           |
+|    |                           |                           | channels like Absher or   | ', 'args': {'code':       | 'traffic-violation-       |                             |                           |
+|    |                           |                           | SADAD.                    | '101'}}                   | lookup', 'file_path': 'sc |                             |                           |
+|    |                           |                           |                           | name='run_skill_script'   | ripts/lookup_violation.py |                             |                           |
+|    |                           |                           |                           | partial_args=None         | ', 'args': {'code':       |                             |                           |
+|    |                           |                           |                           | will_continue=None        | '101'}}                   |                             |                           |
+|    |                           |                           |                           |                           | name='run_skill_script'   |                             |                           |
+|    |                           |                           |                           |                           | partial_args=None         |                             |                           |
+|    |                           |                           |                           |                           | will_continue=None        |                             |                           |
++----+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+
+
+
+********************************************************************
+Eval Set Id: traffic-violation-lookup
+Eval Id: negative_routes_to_fee_draft
+Overall Eval Status: FAILED
+---------------------------------------------------------------------
+Metric: tool_trajectory_avg_score, Status: FAILED, Score: 0.0, Threshold: 1.0
+---------------------------------------------------------------------
+Metric: final_response_match_v2, Status: FAILED, Score: 0.0, Threshold: 0.8
+---------------------------------------------------------------------
+Invocation Details:
++----+----------------------+---------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+|    | prompt               | expected_response         | actual_response           | expected_tool_calls       | actual_tool_calls         | tool_trajectory_avg_score   | final_response_match_v2   |
++====+======================+===========================+===========================+===========================+===========================+=============================+===========================+
+|  0 | How much do I owe in | Illustrative total fee    | To get the total amount   | id=None args={}           | id='call_rflgFfHYGEQtyFKX | Status: FAILED, Score:      | Status: FAILED, Score:    |
+|    | total for my traffic | draft (dummy data � not a | you owe for your traffic  | name='list_skills'        | pUBnoflC' args={}         | 0.0                         | 0.0                       |
+|    | violations and iqama | real payment):            | violations and iqama      | partial_args=None         | name='list_skills'        |                             |                           |
+|    | renewal?             | This combines multiple    | renewal, I will need to   | will_continue=None        | partial_args=None         |                             |                           |
+|    |                      | fee lines into one        | gather the necessary      | id=None                   | will_continue=None        |                             |                           |
+|    |                      | planning summary. Example | details.                  | args={'skill_name':       | id='call_lHzfserrRbfGBWDz |                             |                           |
+|    |                      | breakdown might include   | Could you please provide  | 'government-fee-payment-  | 81nNYDXM'                 |                             |                           |
+|    |                      | traffic violation fines   | the number of dependents  | draft'} name='load_skill' | args={'skill_name':       |                             |                           |
+|    |                      | plus Iqama renewal lines  | you have and any relevant | partial_args=None         | 'government-fee-payment-  |                             |                           |
+|    |                      | for you and dependents.   | violation codes related   | will_continue=None        | draft'} name='load_skill' |                             |                           |
+|    |                      | The draft shows subtotals | to your traffic           | id=None                   | partial_args=None         |                             |                           |
+|    |                      | and an estimated total in | violations? If you are    | args={'skill_name':       | will_continue=None        |                             |                           |
+|    |                      | SAR.                      | unsure about the          | 'government-fee-payment-  |                           |                             |                           |
+|    |                      | This is a draft fee       | violation codes, I can    | draft', 'file_path': 'scr |                           |                             |                           |
+|    |                      | summary only � it does    | assist you further.       | ipts/compute_fees.py',    |                           |                             |                           |
+|    |                      | not submit payment.       |                           | 'args': {'request-type':  |                           |                             |                           |
+|    |                      | Verify all amounts via    |                           | 'combined_summary',       |                           |                             |                           |
+|    |                      | Absher/Muqeem/SADAD.      |                           | 'dependents': '2',        |                           |                             |                           |
+|    |                      |                           |                           | 'violation-codes':        |                           |                             |                           |
+|    |                      |                           |                           | '101,205'}}               |                           |                             |                           |
+|    |                      |                           |                           | name='run_skill_script'   |                           |                             |                           |
+|    |                      |                           |                           | partial_args=None         |                           |                             |                           |
+|    |                      |                           |                           | will_continue=None        |                           |                             |                           |
++----+----------------------+---------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+
+
+
+********************************************************************
+Eval Set Id: traffic-violation-lookup
+Eval Id: positive_violation_code_205
+Overall Eval Status: PASSED
+---------------------------------------------------------------------
+Metric: tool_trajectory_avg_score, Status: PASSED, Score: 1.0, Threshold: 1.0
+---------------------------------------------------------------------
+Metric: final_response_match_v2, Status: PASSED, Score: 1.0, Threshold: 0.8
+---------------------------------------------------------------------
+Invocation Details:
++----+------------------------+---------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+|    | prompt                 | expected_response         | actual_response           | expected_tool_calls       | actual_tool_calls         | tool_trajectory_avg_score   | final_response_match_v2   |
++====+========================+===========================+===========================+===========================+===========================+=============================+===========================+
+|  0 | Look up violation code | Violation code 205 (dummy | For violation code        | id=None args={}           | id='call_r2zGEAwwRyTD8136 | Status: PASSED, Score:      | Status: PASSED, Score:    |
+|    | 205 and tell me the    | data): Running a red      | **205** (Running a red    | name='list_skills'        | 1HCP2gTR' args={}         | 1.0                         | 1.0                       |
+|    | early-payment amount.  | light. Base fine: 500     | light):                   | partial_args=None         | name='list_skills'        |                             |                           |
+|    |                        | SAR. With the             | - **Base Fine:** SAR 500  | will_continue=None        | partial_args=None         |                             |                           |
+|    |                        | illustrative 25% early-   | - **Early-Payment         | id=None                   | will_continue=None        |                             |                           |
+|    |                        | payment discount, the     | Discounted Fine:** SAR    | args={'skill_name':       | id='call_FFshbKwvZiaNBueS |                             |                           |
+|    |                        | discounted fine is 375    | 375 (available if paid    | 'traffic-violation-       | 9WnoZygn'                 |                             |                           |
+|    |                        | SAR if paid within the    | within 30 days)           | lookup'}                  | args={'skill_name':       |                             |                           |
+|    |                        | dummy early-payment       | Please remember to verify | name='load_skill'         | 'traffic-violation-       |                             |                           |
+|    |                        | window.                   | this information via      | partial_args=None         | lookup'}                  |                             |                           |
+|    |                        | Demo data only � not a    | official channels like    | will_continue=None        | name='load_skill'         |                             |                           |
+|    |                        | real record. Verify via   | Absher or SADAD.          | id=None                   | partial_args=None         |                             |                           |
+|    |                        | Absher or SADAD.          |                           | args={'skill_name':       | will_continue=None        |                             |                           |
+|    |                        |                           |                           | 'traffic-violation-       | id='call_9bbHjJmUEguf9nnW |                             |                           |
+|    |                        |                           |                           | lookup', 'file_path': 'sc | YfMLUuLR'                 |                             |                           |
+|    |                        |                           |                           | ripts/lookup_violation.py | args={'skill_name':       |                             |                           |
+|    |                        |                           |                           | ', 'args': {'code':       | 'traffic-violation-       |                             |                           |
+|    |                        |                           |                           | '205'}}                   | lookup', 'file_path': 'sc |                             |                           |
+|    |                        |                           |                           | name='run_skill_script'   | ripts/lookup_violation.py |                             |                           |
+|    |                        |                           |                           | partial_args=None         | ', 'args': {'code':       |                             |                           |
+|    |                        |                           |                           | will_continue=None        | '205'}}                   |                             |                           |
+|    |                        |                           |                           |                           | name='run_skill_script'   |                             |                           |
+|    |                        |                           |                           |                           | partial_args=None         |                             |                           |
+|    |                        |                           |                           |                           | will_continue=None        |                             |                           |
++----+------------------------+---------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+
+
+
+
+========== government-fee-payment-draft (IN_ORDER) ==========
+.\.venv\Scripts\adk.exe : D:\Learning\Courses\Google X Kaggle Vibe 
+Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\google\adk\dependencies\vertexai.py:19: 
+UserWarning: The `vertexai.preview.rag` module is deprecated and will be removed in a future version. Please migrate 
+to the `agentplatform` client. For example:
+At C:\Users\Huzaifa Personal\AppData\Local\Temp\ps-script-1a2d09f4-ca7b-4e8b-b3ce-58c572d2f152.ps1:91 char:5
++     .\.venv\Scripts\adk.exe eval adk_app "..\evals\$($s.id).evalset.j ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\Learning\Cou...t. For example::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    import agentplatform
+    client = agentplatform.Client(project="your-project", location="us-central1")
+    client.rag.create_corpus(...)
+  from vertexai.preview import rag as rag
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\metric_evaluator_registry.py:114: UserWarning: [EXPERIMENTAL] MetricEvaluatorRegistry: This feature 
+is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at 
+any time.
+  metric_evaluator_registry = MetricEvaluatorRegistry()
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\local_eval_service.py:124: UserWarning: [EXPERIMENTAL] UserSimulatorProvider: This feature is 
+experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any 
+time.
+  user_simulator_provider: UserSimulatorProvider = UserSimulatorProvider(),
+D:\Learning\Courses\Google X Kaggle Vibe 
+Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\google\adk\cli\cli_tools_click.py:1111: 
+UserWarning: [EXPERIMENTAL] UserSimulatorProvider: This feature is experimental and may change or be removed in future 
+versions without notice. It may introduce breaking changes at any time.
+  user_simulator_provider = UserSimulatorProvider(
+D:\Learning\Courses\Google X Kaggle Vibe 
+Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\google\adk\cli\cli_tools_click.py:1134: 
+UserWarning: [EXPERIMENTAL] LocalEvalService: This feature is experimental and may change or be removed in future 
+versions without notice. It may introduce breaking changes at any time.
+  eval_service = LocalEvalService(
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\simulation\user_simulator_provider.py:77: UserWarning: [EXPERIMENTAL] StaticUserSimulator: This 
+feature is experimental and may change or be removed in future versions without notice. It may introduce breaking 
+changes at any time.
+  return StaticUserSimulator(static_conversation=eval_case.conversation)
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\simulation\static_user_simulator.py:39: UserWarning: [EXPERIMENTAL] UserSimulator: This feature is 
+experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any 
+time.
+  super().__init__(
+2026-07-14 18:07:12,088 - INFO - plugin_manager.py:119 - Plugin 'request_intercepter_plugin' registered.
+2026-07-14 18:07:12,089 - INFO - plugin_manager.py:119 - Plugin 'ensure_retry_options' registered.
+2026-07-14 18:07:12,096 - INFO - plugin_manager.py:119 - Plugin 'request_intercepter_plugin' registered.
+2026-07-14 18:07:12,096 - INFO - plugin_manager.py:119 - Plugin 'ensure_retry_options' registered.
+2026-07-14 18:07:12,099 - INFO - plugin_manager.py:119 - Plugin 'request_intercepter_plugin' registered.
+2026-07-14 18:07:12,099 - INFO - plugin_manager.py:119 - Plugin 'ensure_retry_options' registered.
+2026-07-14 18:07:12,100 - INFO - plugin_manager.py:119 - Plugin 'request_intercepter_plugin' registered.
+2026-07-14 18:07:12,100 - INFO - plugin_manager.py:119 - Plugin 'ensure_retry_options' registered.
+Using evaluation criteria: criteria={'tool_trajectory_avg_score': BaseCriterion(threshold=1.0, include_intermediate_responses_in_final=False, match_type='IN_ORDER'), 'final_response_match_v2': BaseCriterion(threshold=0.8, include_intermediate_responses_in_final=False, judge_model_options={'judge_model': 'openai/gpt-4o-mini', 'num_samples': 5})} custom_metrics=None user_simulator_config=None
+[92m18:07:20 - LiteLLM:INFO[0m: utils.py:4007 - 
+2026-07-14 18:07:20,196 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:20 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:20 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:20 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:20,197 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:20,197 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:20,198 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:22 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:22,202 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:22 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:22,460 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:22 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:22,462 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:23 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:23,272 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:23,313 - INFO - runners.py:2123 - Closing runner...
+2026-07-14 18:07:23,313 - INFO - runners.py:2099 - Closing toolset: SkillToolset
+2026-07-14 18:07:23,314 - INFO - runners.py:2102 - Successfully closed toolset: SkillToolset
+2026-07-14 18:07:23,314 - INFO - runners.py:2136 - Runner closed.
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\simulation\user_simulator_provider.py:77: UserWarning: [EXPERIMENTAL] StaticUserSimulator: This 
+feature is experimental and may change or be removed in future versions without notice. It may introduce breaking 
+changes at any time.
+  return StaticUserSimulator(static_conversation=eval_case.conversation)
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\simulation\static_user_simulator.py:39: UserWarning: [EXPERIMENTAL] UserSimulator: This feature is 
+experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any 
+time.
+  super().__init__(
+2026-07-14 18:07:23,315 - INFO - plugin_manager.py:119 - Plugin 'request_intercepter_plugin' registered.
+2026-07-14 18:07:23,315 - INFO - plugin_manager.py:119 - Plugin 'ensure_retry_options' registered.
+[92m18:07:23 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:23,326 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:23 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:23,523 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:23 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:23,910 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:24 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:24,314 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:25 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:25,463 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:25,967 - INFO - runners.py:2123 - Closing runner...
+2026-07-14 18:07:25,967 - INFO - runners.py:2099 - Closing toolset: SkillToolset
+2026-07-14 18:07:25,967 - INFO - runners.py:2102 - Successfully closed toolset: SkillToolset
+2026-07-14 18:07:25,967 - INFO - runners.py:2136 - Runner closed.
+[92m18:07:32 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:32,752 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:33 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:33,490 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:34,651 - INFO - runners.py:2123 - Closing runner...
+2026-07-14 18:07:34,651 - INFO - runners.py:2099 - Closing toolset: SkillToolset
+2026-07-14 18:07:34,651 - INFO - runners.py:2102 - Successfully closed toolset: SkillToolset
+2026-07-14 18:07:34,651 - INFO - runners.py:2136 - Runner closed.
+[92m18:07:35 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:35,626 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:35,775 - INFO - runners.py:2123 - Closing runner...
+2026-07-14 18:07:35,776 - INFO - runners.py:2099 - Closing toolset: SkillToolset
+2026-07-14 18:07:35,776 - INFO - runners.py:2102 - Successfully closed toolset: SkillToolset
+2026-07-14 18:07:35,776 - INFO - runners.py:2136 - Runner closed.
+2026-07-14 18:07:37,737 - INFO - runners.py:2123 - Closing runner...
+2026-07-14 18:07:37,738 - INFO - runners.py:2099 - Closing toolset: SkillToolset
+2026-07-14 18:07:37,738 - INFO - runners.py:2102 - Successfully closed toolset: SkillToolset
+2026-07-14 18:07:37,738 - INFO - runners.py:2136 - Runner closed.
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\metric_evaluator_registry.py:80: UserWarning: [EXPERIMENTAL] FinalResponseMatchV2Evaluator: This 
+feature is experimental and may change or be removed in future versions without notice. It may introduce breaking 
+changes at any time.
+  return evaluator_type(eval_metric=eval_metric)
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\final_response_match_v2.py:146: UserWarning: [EXPERIMENTAL] LlmAsJudge: This feature is experimental 
+and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  super().__init__(
+[92m18:07:37 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:37,754 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:37 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:37,759 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:37 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:37,770 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:37 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:37,763 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:39 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:39,780 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:40 - LiteLLM:INFO[0m: utils.py:4007 - 
+2026-07-14 18:07:40,070 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:40 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:40,108 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:40 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:40,431 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:41 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:41,621 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:42 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:42,225 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:42 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:42,943 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:43 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:43,354 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:44 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:44,461 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:44 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:44,655 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:45 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:45,517 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:45 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:45,927 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:46 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:46,346 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:46 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:46,835 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:47 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:47,586 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:48 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:48,268 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:48 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:48,332 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:50 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:50,728 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:54 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:54,697 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:07:57 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:07:57,587 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:08:00 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:00,557 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:03,349 - INFO - local_eval_set_results_manager.py:64 - Writing eval result to file: 
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\adk_app\.adk/eval_history\adk
+_app_government-fee-payment-draft_1784034483.3496418.evalset_result.json
+*********************************************************************
+Eval Run Summary
+government-fee-payment-draft:
+  Tests passed: 3
+  Tests failed: 2
+********************************************************************
+Eval Set Id: government-fee-payment-draft
+Eval Id: positive_rephrasing_fee_breakdown
+Overall Eval Status: PASSED
+---------------------------------------------------------------------
+Metric: tool_trajectory_avg_score, Status: PASSED, Score: 1.0, Threshold: 1.0
+---------------------------------------------------------------------
+Metric: final_response_match_v2, Status: PASSED, Score: 1.0, Threshold: 0.8
+---------------------------------------------------------------------
+Invocation Details:
++----+---------------------------+--------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+|    | prompt                    | expected_response        | actual_response           | expected_tool_calls       | actual_tool_calls         | tool_trajectory_avg_score   | final_response_match_v2   |
++====+===========================+==========================+===========================+===========================+===========================+=============================+===========================+
+|  0 | Can you draft a fee       | Illustrative fee         | Here is a draft breakdown | id=None args={}           | id='call_fYYoZEWmQRzUp1Sn | Status: PASSED, Score:      | Status: PASSED, Score:    |
+|    | breakdown for renewing my | breakdown draft (dummy   | for renewing your         | name='list_skills'        | PQTgVmve' args={}         | 1.0                         | 1.0                       |
+|    | residency permit with one | data):                   | residency permit (Iqama)  | partial_args=None         | name='list_skills'        |                             |                           |
+|    | dependent?                | - Primary Iqama renewal: | with one dependent:       | will_continue=None        | partial_args=None         |                             |                           |
+|    |                           | 650 SAR                  | - **Primary Iqama         | id=None                   | will_continue=None        |                             |                           |
+|    |                           | - Dependent renewal (1): | Renewal:** 650 SAR        | args={'skill_name':       | id='call_5B5M9cP6KgwqGD84 |                             |                           |
+|    |                           | 650 SAR                  | - **Dependent 1           | 'government-fee-payment-  | GMZ4V7f3'                 |                             |                           |
+|    |                           | - Subtotal: 1,300 SAR    | Renewal:** 650 SAR        | draft'} name='load_skill' | args={'skill_name':       |                             |                           |
+|    |                           | Draft only � no payment  | ### **Subtotal:** 1300    | partial_args=None         | 'government-fee-payment-  |                             |                           |
+|    |                           | submitted. Verify via    | SAR                       | will_continue=None        | draft'} name='load_skill' |                             |                           |
+|    |                           | Absher/Muqeem/SADAD.     | ### **Total:** 1300 SAR   | id=None                   | partial_args=None         |                             |                           |
+|    |                           |                          | **Please note:** This is  | args={'skill_name':       | will_continue=None        |                             |                           |
+|    |                           |                          | a draft only � it does    | 'government-fee-payment-  | id='call_4Fv5v1HTHjuQwda9 |                             |                           |
+|    |                           |                          | not submit payment.       | draft', 'file_path': 'scr | X3dctjeR'                 |                             |                           |
+|    |                           |                          | Ensure to verify any      | ipts/compute_fees.py',    | args={'skill_name':       |                             |                           |
+|    |                           |                          | important details via     | 'args': {'request-type':  | 'government-fee-payment-  |                             |                           |
+|    |                           |                          | official channels         | 'iqama_renewal',          | draft', 'file_path': 'scr |                             |                           |
+|    |                           |                          | (Absher/Muqeem/SADAD)     | 'dependents': '1'}}       | ipts/compute_fees.py',    |                             |                           |
+|    |                           |                          | before proceeding with    | name='run_skill_script'   | 'args': {'request-type':  |                             |                           |
+|    |                           |                          | payment.                  | partial_args=None         | 'iqama_renewal',          |                             |                           |
+|    |                           |                          |                           | will_continue=None        | 'dependents': '1'}}       |                             |                           |
+|    |                           |                          |                           |                           | name='run_skill_script'   |                             |                           |
+|    |                           |                          |                           |                           | partial_args=None         |                             |                           |
+|    |                           |                          |                           |                           | will_continue=None        |                             |                           |
++----+---------------------------+--------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+
+
+
+********************************************************************
+Eval Set Id: government-fee-payment-draft
+Eval Id: negative_routes_to_traffic_lookup
+Overall Eval Status: PASSED
+---------------------------------------------------------------------
+Metric: tool_trajectory_avg_score, Status: PASSED, Score: 1.0, Threshold: 1.0
+---------------------------------------------------------------------
+Metric: final_response_match_v2, Status: PASSED, Score: 1.0, Threshold: 0.8
+---------------------------------------------------------------------
+Invocation Details:
++----+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+|    | prompt                    | expected_response         | actual_response           | expected_tool_calls       | actual_tool_calls         | tool_trajectory_avg_score   | final_response_match_v2   |
++====+===========================+===========================+===========================+===========================+===========================+=============================+===========================+
+|  0 | What is the early-payment | Violation code 205 (dummy | For violation code        | id=None args={}           | id='call_t1pIPhSjCiNrHARw | Status: PASSED, Score:      | Status: PASSED, Score:    |
+|    | fine for violation code   | data): Running a red      | **205**, which is for     | name='list_skills'        | iKaMfOBx' args={}         | 1.0                         | 1.0                       |
+|    | 205?                      | light. Base fine 500 SAR; | **running a red light**,  | partial_args=None         | name='list_skills'        |                             |                           |
+|    |                           | early-payment discounted  | the following fines       | will_continue=None        | partial_args=None         |                             |                           |
+|    |                           | fine 375 SAR (25% dummy   | apply:                    | id=None                   | will_continue=None        |                             |                           |
+|    |                           | discount).                | - **Base Fine:** 500 SAR  | args={'skill_name':       | id='call_y8sSIeDsGvmFDWka |                             |                           |
+|    |                           | Demo data only. Verify    | - **Early-Payment         | 'traffic-violation-       | HH2QE1oE'                 |                             |                           |
+|    |                           | via Absher or SADAD.      | Discounted Fine:** 375    | lookup'}                  | args={'skill_name':       |                             |                           |
+|    |                           |                           | SAR (if paid within 30    | name='load_skill'         | 'traffic-violation-       |                             |                           |
+|    |                           |                           | days)                     | partial_args=None         | lookup'}                  |                             |                           |
+|    |                           |                           | Please remember to verify | will_continue=None        | name='load_skill'         |                             |                           |
+|    |                           |                           | any important information | id=None                   | partial_args=None         |                             |                           |
+|    |                           |                           | through official channels | args={'skill_name':       | will_continue=None        |                             |                           |
+|    |                           |                           | like Absher or SADAD.     | 'traffic-violation-       | id='call_zMkodkpxPH4z0WzA |                             |                           |
+|    |                           |                           |                           | lookup', 'file_path': 'sc | jGtu0PJs'                 |                             |                           |
+|    |                           |                           |                           | ripts/lookup_violation.py | args={'skill_name':       |                             |                           |
+|    |                           |                           |                           | ', 'args': {'code':       | 'traffic-violation-       |                             |                           |
+|    |                           |                           |                           | '205'}}                   | lookup', 'file_path': 'sc |                             |                           |
+|    |                           |                           |                           | name='run_skill_script'   | ripts/lookup_violation.py |                             |                           |
+|    |                           |                           |                           | partial_args=None         | ', 'args': {'code':       |                             |                           |
+|    |                           |                           |                           | will_continue=None        | '205'}}                   |                             |                           |
+|    |                           |                           |                           |                           | name='run_skill_script'   |                             |                           |
+|    |                           |                           |                           |                           | partial_args=None         |                             |                           |
+|    |                           |                           |                           |                           | will_continue=None        |                             |                           |
++----+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+
+
+
+********************************************************************
+Eval Set Id: government-fee-payment-draft
+Eval Id: negative_unrelated_no_skill
+Overall Eval Status: FAILED
+---------------------------------------------------------------------
+Metric: tool_trajectory_avg_score, Status: PASSED, Score: 1.0, Threshold: 1.0
+---------------------------------------------------------------------
+Metric: final_response_match_v2, Status: FAILED, Score: 0.0, Threshold: 0.8
+---------------------------------------------------------------------
+Invocation Details:
++----+-------------------------+---------------------------+---------------------------+-----------------------+---------------------+-----------------------------+---------------------------+
+|    | prompt                  | expected_response         | actual_response           | expected_tool_calls   | actual_tool_calls   | tool_trajectory_avg_score   | final_response_match_v2   |
++====+=========================+===========================+===========================+=======================+=====================+=============================+===========================+
+|  0 | Recommend a good laptop | I'm a Saudi citizen-      | I'm here to assist with   |                       |                     | Status: PASSED, Score:      | Status: FAILED, Score:    |
+|    | for gaming.             | services demo assistant   | citizen services in Saudi |                       |                     | 1.0                         | 0.0                       |
+|    |                         | and can't help with       | GovTech. For any          |                       |                     |                             |                           |
+|    |                         | laptop recommendations.   | important technology      |                       |                     |                             |                           |
+|    |                         | For product advice, try   | purchase recommendations, |                       |                     |                             |                           |
+|    |                         | tech review sites. If you | such as gaming laptops, I |                       |                     |                             |                           |
+|    |                         | have a government-        | recommend checking        |                       |                     |                             |                           |
+|    |                         | services question (Iqama, | trusted tech review       |                       |                     |                             |                           |
+|    |                         | violations, fee drafts,   | websites, official        |                       |                     |                             |                           |
+|    |                         | appointments), ask me �   | retailers, or seeking     |                       |                     |                             |                           |
+|    |                         | this demo uses            | advice from experts in    |                       |                     |                             |                           |
+|    |                         | illustrative data only.   | technology forums. Always |                       |                     |                             |                           |
+|    |                         |                           | verify important          |                       |                     |                             |                           |
+|    |                         |                           | information through       |                       |                     |                             |                           |
+|    |                         |                           | official channels.        |                       |                     |                             |                           |
++----+-------------------------+---------------------------+---------------------------+-----------------------+---------------------+-----------------------------+---------------------------+
+
+
+
+********************************************************************
+Eval Set Id: government-fee-payment-draft
+Eval Id: positive_how_much_do_i_owe
+Overall Eval Status: FAILED
+---------------------------------------------------------------------
+Metric: tool_trajectory_avg_score, Status: FAILED, Score: 0.0, Threshold: 1.0
+---------------------------------------------------------------------
+Metric: final_response_match_v2, Status: FAILED, Score: 0.0, Threshold: 0.8
+---------------------------------------------------------------------
+Invocation Details:
++----+----------------------+---------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+|    | prompt               | expected_response         | actual_response           | expected_tool_calls       | actual_tool_calls         | tool_trajectory_avg_score   | final_response_match_v2   |
++====+======================+===========================+===========================+===========================+===========================+=============================+===========================+
+|  0 | How much do I owe in | Illustrative combined fee | To calculate the total    | id=None args={}           | id='call_fiwbnJPthSWBeMeA | Status: FAILED, Score:      | Status: FAILED, Score:    |
+|    | total for my traffic | draft (dummy data � not a | amount you owe for your   | name='list_skills'        | Q1XWhe9v' args={}         | 0.0                         | 0.0                       |
+|    | violations and iqama | real payment):            | traffic violations and    | partial_args=None         | name='list_skills'        |                             |                           |
+|    | renewal?             | - Iqama renewal           | iqama renewal, I need to  | will_continue=None        | partial_args=None         |                             |                           |
+|    |                      | (primary): 650 SAR        | know:                     | id=None                   | will_continue=None        |                             |                           |
+|    |                      | - Dependent renewals (2): | 1. The number of          | args={'skill_name':       | id='call_cLZcl29cTYnS58SC |                             |                           |
+|    |                      | 1,300 SAR                 | dependents for the iqama  | 'government-fee-payment-  | oI0Ofhvi'                 |                             |                           |
+|    |                      | - Traffic violation 101   | renewal (if any).         | draft'} name='load_skill' | args={'skill_name':       |                             |                           |
+|    |                      | (early-payment): 150 SAR  | 2. The violation codes    | partial_args=None         | 'government-fee-payment-  |                             |                           |
+|    |                      | - Traffic violation 205   | for your traffic          | will_continue=None        | draft'} name='load_skill' |                             |                           |
+|    |                      | (early-payment): 375 SAR  | violations (if known).    | id=None                   | partial_args=None         |                             |                           |
+|    |                      | - Subtotal: 2,475 SAR     | Please provide this       | args={'skill_name':       | will_continue=None        |                             |                           |
+|    |                      | Draft summary only � does | information so I can      | 'government-fee-payment-  |                           |                             |                           |
+|    |                      | not submit payment.       | generate a summary for    | draft', 'file_path': 'scr |                           |                             |                           |
+|    |                      | Verify via                | you. Remember, this will  | ipts/compute_fees.py',    |                           |                             |                           |
+|    |                      | Absher/Muqeem/SADAD.      | be a draft only and won't | 'args': {'request-type':  |                           |                             |                           |
+|    |                      |                           | submit any payment. After | 'combined_summary',       |                           |                             |                           |
+|    |                      |                           | I provide it, you should  | 'dependents': '2',        |                           |                             |                           |
+|    |                      |                           | verify any important      | 'violation-codes':        |                           |                             |                           |
+|    |                      |                           | details through official  | '101,205'}}               |                           |                             |                           |
+|    |                      |                           | channels like Absher,     | name='run_skill_script'   |                           |                             |                           |
+|    |                      |                           | Muqeem, or SADAD.         | partial_args=None         |                           |                             |                           |
+|    |                      |                           |                           | will_continue=None        |                           |                             |                           |
++----+----------------------+---------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+
+
+
+********************************************************************
+Eval Set Id: government-fee-payment-draft
+Eval Id: positive_iqama_total_with_dependents
+Overall Eval Status: PASSED
+---------------------------------------------------------------------
+Metric: tool_trajectory_avg_score, Status: PASSED, Score: 1.0, Threshold: 1.0
+---------------------------------------------------------------------
+Metric: final_response_match_v2, Status: PASSED, Score: 1.0, Threshold: 0.8
+---------------------------------------------------------------------
+Invocation Details:
++----+---------------------------+--------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+|    | prompt                    | expected_response        | actual_response           | expected_tool_calls       | actual_tool_calls         | tool_trajectory_avg_score   | final_response_match_v2   |
++====+===========================+==========================+===========================+===========================+===========================+=============================+===========================+
+|  0 | How much will it cost me  | Illustrative total fee   | The estimated total cost  | id=None args={}           | id='call_GujGI6XJcp2hR8FS | Status: PASSED, Score:      | Status: PASSED, Score:    |
+|    | in total to renew my      | draft (dummy data only � | to renew your iqama along | name='list_skills'        | TnxnnyNd' args={}         | 1.0                         | 1.0                       |
+|    | iqama, including fees for | not a real payment or    | with the fees for your    | partial_args=None         | name='list_skills'        |                             |                           |
+|    | my two dependents?        | official quote):         | two dependents is as      | will_continue=None        | partial_args=None         |                             |                           |
+|    |                           | - Primary Iqama renewal: | follows:                  | id=None                   | will_continue=None        |                             |                           |
+|    |                           | 650 SAR                  | - **Primary Iqama         | args={'skill_name':       | id='call_M8RUK6AOPXpxiehq |                             |                           |
+|    |                           | - Dependent 1 renewal:   | renewal**: 650 SAR        | 'government-fee-payment-  | uZEWRYkT'                 |                             |                           |
+|    |                           | 650 SAR                  | - **Dependent 1           | draft'} name='load_skill' | args={'skill_name':       |                             |                           |
+|    |                           | - Dependent 2 renewal:   | renewal**: 650 SAR        | partial_args=None         | 'government-fee-payment-  |                             |                           |
+|    |                           | 650 SAR                  | - **Dependent 2           | will_continue=None        | draft'} name='load_skill' |                             |                           |
+|    |                           | - Subtotal renewals:     | renewal**: 650 SAR        | id=None                   | partial_args=None         |                             |                           |
+|    |                           | 1,950 SAR                | ### **Total Cost**: 1950  | args={'skill_name':       | will_continue=None        |                             |                           |
+|    |                           | - Optional express       | SAR                       | 'government-fee-payment-  | id='call_rur6A6gAu3FoFxOb |                             |                           |
+|    |                           | processing (dummy add-   | Please note that this is  | draft', 'file_path': 'scr | WbYSPVMZ'                 |                             |                           |
+|    |                           | on): 100 SAR             | a draft summary and does  | ipts/compute_fees.py',    | args={'skill_name':       |                             |                           |
+|    |                           | - Estimated total: 2,050 | not represent a confirmed | 'args': {'request-type':  | 'government-fee-payment-  |                             |                           |
+|    |                           | SAR                      | payment. I recommend      | 'iqama_renewal',          | draft', 'file_path': 'scr |                             |                           |
+|    |                           | This is a draft fee      | verifying all costs       | 'dependents': '2'}}       | ipts/compute_fees.py',    |                             |                           |
+|    |                           | summary for planning     | through official channels | name='run_skill_script'   | 'args': {'request-type':  |                             |                           |
+|    |                           | purposes. It does not    | such as Absher, Muqeem,   | partial_args=None         | 'iqama_renewal',          |                             |                           |
+|    |                           | submit payment. Verify   | or SADAD.                 | will_continue=None        | 'dependents': '2'}}       |                             |                           |
+|    |                           | all amounts on           |                           |                           | name='run_skill_script'   |                             |                           |
+|    |                           | Absher/Muqeem/SADAD      |                           |                           | partial_args=None         |                             |                           |
+|    |                           | before paying.           |                           |                           | will_continue=None        |                             |                           |
++----+---------------------------+--------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+
+
+
+
+========== appointment-slot-finder (EXACT) ==========
+.\.venv\Scripts\adk.exe : D:\Learning\Courses\Google X Kaggle Vibe 
+Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\google\adk\dependencies\vertexai.py:19: 
+UserWarning: The `vertexai.preview.rag` module is deprecated and will be removed in a future version. Please migrate 
+to the `agentplatform` client. For example:
+At C:\Users\Huzaifa Personal\AppData\Local\Temp\ps-script-1a2d09f4-ca7b-4e8b-b3ce-58c572d2f152.ps1:91 char:5
++     .\.venv\Scripts\adk.exe eval adk_app "..\evals\$($s.id).evalset.j ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\Learning\Cou...t. For example::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    import agentplatform
+    client = agentplatform.Client(project="your-project", location="us-central1")
+    client.rag.create_corpus(...)
+  from vertexai.preview import rag as rag
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\metric_evaluator_registry.py:114: UserWarning: [EXPERIMENTAL] MetricEvaluatorRegistry: This feature 
+is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at 
+any time.
+  metric_evaluator_registry = MetricEvaluatorRegistry()
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\local_eval_service.py:124: UserWarning: [EXPERIMENTAL] UserSimulatorProvider: This feature is 
+experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any 
+time.
+  user_simulator_provider: UserSimulatorProvider = UserSimulatorProvider(),
+D:\Learning\Courses\Google X Kaggle Vibe 
+Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\google\adk\cli\cli_tools_click.py:1111: 
+UserWarning: [EXPERIMENTAL] UserSimulatorProvider: This feature is experimental and may change or be removed in future 
+versions without notice. It may introduce breaking changes at any time.
+  user_simulator_provider = UserSimulatorProvider(
+D:\Learning\Courses\Google X Kaggle Vibe 
+Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\google\adk\cli\cli_tools_click.py:1134: 
+UserWarning: [EXPERIMENTAL] LocalEvalService: This feature is experimental and may change or be removed in future 
+versions without notice. It may introduce breaking changes at any time.
+  eval_service = LocalEvalService(
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\simulation\user_simulator_provider.py:77: UserWarning: [EXPERIMENTAL] StaticUserSimulator: This 
+feature is experimental and may change or be removed in future versions without notice. It may introduce breaking 
+changes at any time.
+  return StaticUserSimulator(static_conversation=eval_case.conversation)
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\simulation\static_user_simulator.py:39: UserWarning: [EXPERIMENTAL] UserSimulator: This feature is 
+experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any 
+time.
+  super().__init__(
+2026-07-14 18:08:32,052 - INFO - plugin_manager.py:119 - Plugin 'request_intercepter_plugin' registered.
+2026-07-14 18:08:32,053 - INFO - plugin_manager.py:119 - Plugin 'ensure_retry_options' registered.
+2026-07-14 18:08:32,059 - INFO - plugin_manager.py:119 - Plugin 'request_intercepter_plugin' registered.
+2026-07-14 18:08:32,059 - INFO - plugin_manager.py:119 - Plugin 'ensure_retry_options' registered.
+2026-07-14 18:08:32,060 - INFO - plugin_manager.py:119 - Plugin 'request_intercepter_plugin' registered.
+2026-07-14 18:08:32,060 - INFO - plugin_manager.py:119 - Plugin 'ensure_retry_options' registered.
+2026-07-14 18:08:32,061 - INFO - plugin_manager.py:119 - Plugin 'request_intercepter_plugin' registered.
+2026-07-14 18:08:32,062 - INFO - plugin_manager.py:119 - Plugin 'ensure_retry_options' registered.
+Using evaluation criteria: criteria={'tool_trajectory_avg_score': BaseCriterion(threshold=1.0, include_intermediate_responses_in_final=False, match_type='EXACT'), 'final_response_match_v2': BaseCriterion(threshold=0.8, include_intermediate_responses_in_final=False, judge_model_options={'judge_model': 'openai/gpt-4o-mini', 'num_samples': 5})} custom_metrics=None user_simulator_config=None
+[92m18:08:39 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:39,864 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:08:39 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:39,865 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:08:39 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:39,869 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:08:39 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:39,869 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:08:41 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:41,933 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:08:41 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:41,941 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:08:41 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:41,955 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:42,542 - INFO - runners.py:2123 - Closing runner...
+2026-07-14 18:08:42,543 - INFO - runners.py:2099 - Closing toolset: SkillToolset
+2026-07-14 18:08:42,543 - INFO - runners.py:2102 - Successfully closed toolset: SkillToolset
+2026-07-14 18:08:42,543 - INFO - runners.py:2136 - Runner closed.
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\simulation\user_simulator_provider.py:77: UserWarning: [EXPERIMENTAL] StaticUserSimulator: This 
+feature is experimental and may change or be removed in future versions without notice. It may introduce breaking 
+changes at any time.
+  return StaticUserSimulator(static_conversation=eval_case.conversation)
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\simulation\static_user_simulator.py:39: UserWarning: [EXPERIMENTAL] UserSimulator: This feature is 
+experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any 
+time.
+  super().__init__(
+2026-07-14 18:08:42,544 - INFO - plugin_manager.py:119 - Plugin 'request_intercepter_plugin' registered.
+2026-07-14 18:08:42,544 - INFO - plugin_manager.py:119 - Plugin 'ensure_retry_options' registered.
+[92m18:08:42 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:42,557 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:08:43 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:43,294 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:08:43 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:43,296 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:08:43 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:43,297 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:08:43 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:43,632 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:08:44 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:44,796 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:08:54 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:54,692 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:54,787 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:08:54 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:08:54 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:54,803 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:08:56 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:56,590 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:57,188 - INFO - runners.py:2123 - Closing runner...
+2026-07-14 18:08:57,188 - INFO - runners.py:2099 - Closing toolset: SkillToolset
+2026-07-14 18:08:57,189 - INFO - runners.py:2102 - Successfully closed toolset: SkillToolset
+2026-07-14 18:08:57,189 - INFO - runners.py:2136 - Runner closed.
+2026-07-14 18:08:57,414 - INFO - runners.py:2123 - Closing runner...
+2026-07-14 18:08:57,414 - INFO - runners.py:2099 - Closing toolset: SkillToolset
+2026-07-14 18:08:57,414 - INFO - runners.py:2102 - Successfully closed toolset: SkillToolset
+2026-07-14 18:08:57,415 - INFO - runners.py:2136 - Runner closed.
+2026-07-14 18:08:57,512 - INFO - runners.py:2123 - Closing runner...
+2026-07-14 18:08:57,513 - INFO - runners.py:2099 - Closing toolset: SkillToolset
+2026-07-14 18:08:57,513 - INFO - runners.py:2102 - Successfully closed toolset: SkillToolset
+2026-07-14 18:08:57,513 - INFO - runners.py:2136 - Runner closed.
+2026-07-14 18:08:58,880 - INFO - runners.py:2123 - Closing runner...
+2026-07-14 18:08:58,880 - INFO - runners.py:2099 - Closing toolset: SkillToolset
+2026-07-14 18:08:58,880 - INFO - runners.py:2102 - Successfully closed toolset: SkillToolset
+2026-07-14 18:08:58,880 - INFO - runners.py:2136 - Runner closed.
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\metric_evaluator_registry.py:80: UserWarning: [EXPERIMENTAL] FinalResponseMatchV2Evaluator: This 
+feature is experimental and may change or be removed in future versions without notice. It may introduce breaking 
+changes at any time.
+  return evaluator_type(eval_metric=eval_metric)
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\final_response_match_v2.py:146: UserWarning: [EXPERIMENTAL] LlmAsJudge: This feature is experimental 
+and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  super().__init__(
+[92m18:08:58 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:58,897 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:08:58 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:58,906 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:08:58 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:58,915 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:08:58 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:08:58,916 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:09:00 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:00,825 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:09:00 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:00,908 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:09:01 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:01,083 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:09:01 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:01,537 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:09:03 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:03,451 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:09:03 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:03,514 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:09:03 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:03,976 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:09:04 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:04,088 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:09:05 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:05,655 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:09:06 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:06,102 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:09:06 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:06,367 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:09:06 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:06,745 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:09:08 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:08,348 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:09:08 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:08,584 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:09:09 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:09,138 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:09:09 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:09,882 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:09:11 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:11,031 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:09:13 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:13,695 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:09:16 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:16,523 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:09:20 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:20,288 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m18:09:23 - LiteLLM:INFO[0m: utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:23,182 - INFO - utils.py:4007 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2026-07-14 18:09:27,143 - INFO - local_eval_set_results_manager.py:64 - Writing eval result to file: 
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\adk_app\.adk/eval_history\adk
+_app_appointment-slot-finder_1784034567.1436005.evalset_result.json
+*********************************************************************
+Eval Run Summary
+appointment-slot-finder:
+  Tests passed: 4
+  Tests failed: 1
+********************************************************************
+Eval Set Id: appointment-slot-finder
+Eval Id: positive_rephrasing_book_visit
+Overall Eval Status: PASSED
+---------------------------------------------------------------------
+Metric: tool_trajectory_avg_score, Status: PASSED, Score: 1.0, Threshold: 1.0
+---------------------------------------------------------------------
+Metric: final_response_match_v2, Status: PASSED, Score: 1.0, Threshold: 0.8
+---------------------------------------------------------------------
+Invocation Details:
++----+--------------------------+--------------------------+-------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+|    | prompt                   | expected_response        | actual_response         | expected_tool_calls       | actual_tool_calls         | tool_trajectory_avg_score   | final_response_match_v2   |
++====+==========================+==========================+=========================+===========================+===========================+=============================+===========================+
+|  0 | I need to book a         | Available dummy openings | Here are the available  | id=None args={}           | id='call_RNii4DgQtcKZlZ8g | Status: PASSED, Score:      | Status: PASSED, Score:    |
+|    | government office visit  | in Dammam (July 22�25,   | government office       | name='list_skills'        | qMxpE6dx' args={}         | 1.0                         | 1.0                       |
+|    | in Dammam � any openings | 2026, excluding Fri/Sat  | appointment slots in    | partial_args=None         | name='list_skills'        |                             |                           |
+|    | July 22�25, 2026?        | and dummy holidays):     | Dammam from July 22�25, | will_continue=None        | partial_args=None         |                             |                           |
+|    |                          | - Dammam Main (DMM-01):  | 2026:                   | id=None                   | will_continue=None        |                             |                           |
+|    |                          | July 22 09:00, July 23   | ### Dammam Main (Center | args={'skill_name':       | id='call_k9O2k5QbLp2kaSwR |                             |                           |
+|    |                          | 10:00                    | ID: DMM-01)             | 'appointment-slot-        | rQBWewBK'                 |                             |                           |
+|    |                          | - Dammam East (DMM-02):  | - **July 22, 2026**     | finder'}                  | args={'skill_name':       |                             |                           |
+|    |                          | July 22 15:00            |   - 09:00 AM            | name='load_skill'         | 'appointment-slot-        |                             |                           |
+|    |                          | Illustrative demo data.  | - **July 23, 2026**     | partial_args=None         | finder'}                  |                             |                           |
+|    |                          | Confirm via Absher.      |   - 10:00 AM            | will_continue=None        | name='load_skill'         |                             |                           |
+|    |                          |                          | ### Dammam East (Center | id=None                   | partial_args=None         |                             |                           |
+|    |                          |                          | ID: DMM-02)             | args={'skill_name':       | will_continue=None        |                             |                           |
+|    |                          |                          | - **July 22, 2026**     | 'appointment-slot-        | id='call_xbG5Kn2NVMNbxKrc |                             |                           |
+|    |                          |                          |   - 03:00 PM            | finder', 'file_path':     | J1WzpEjt'                 |                             |                           |
+|    |                          |                          | Please verify this      | 'scripts/find_slots.py',  | args={'skill_name':       |                             |                           |
+|    |                          |                          | information through     | 'args': {'city':          | 'appointment-slot-        |                             |                           |
+|    |                          |                          | official channels like  | 'Dammam', 'start-date':   | finder', 'file_path':     |                             |                           |
+|    |                          |                          | Absher or your local    | '2026-07-22', 'end-date': | 'scripts/find_slots.py',  |                             |                           |
+|    |                          |                          | government services.    | '2026-07-25'}}            | 'args': {'city':          |                             |                           |
+|    |                          |                          |                         | name='run_skill_script'   | 'Dammam', 'start-date':   |                             |                           |
+|    |                          |                          |                         | partial_args=None         | '2026-07-22', 'end-date': |                             |                           |
+|    |                          |                          |                         | will_continue=None        | '2026-07-25'}}            |                             |                           |
+|    |                          |                          |                         |                           | name='run_skill_script'   |                             |                           |
+|    |                          |                          |                         |                           | partial_args=None         |                             |                           |
+|    |                          |                          |                         |                           | will_continue=None        |                             |                           |
++----+--------------------------+--------------------------+-------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+
+
+
+********************************************************************
+Eval Set Id: appointment-slot-finder
+Eval Id: negative_unrelated_no_skill
+Overall Eval Status: PASSED
+---------------------------------------------------------------------
+Metric: tool_trajectory_avg_score, Status: PASSED, Score: 1.0, Threshold: 1.0
+---------------------------------------------------------------------
+Metric: final_response_match_v2, Status: PASSED, Score: 1.0, Threshold: 0.8
+---------------------------------------------------------------------
+Invocation Details:
++----+------------------------+---------------------------+--------------------------+-----------------------+---------------------+-----------------------------+---------------------------+
+|    | prompt                 | expected_response         | actual_response          | expected_tool_calls   | actual_tool_calls   | tool_trajectory_avg_score   | final_response_match_v2   |
++====+========================+===========================+==========================+=======================+=====================+=============================+===========================+
+|  0 | Who won the last World | I'm a Saudi citizen-      | I'm here to assist with  |                       |                     | Status: PASSED, Score:      | Status: PASSED, Score:    |
+|    | Cup?                   | services demo assistant   | citizen services related |                       |                     | 1.0                         | 1.0                       |
+|    |                        | and can't help with       | to Saudi GovTech. For    |                       |                     |                             |                           |
+|    |                        | sports trivia. For World  | sports-related inquiries |                       |                     |                             |                           |
+|    |                        | Cup history, try a sports | like the last World Cup  |                       |                     |                             |                           |
+|    |                        | reference site. If you    | winner, I recommend      |                       |                     |                             |                           |
+|    |                        | need Iqama, violation,    | checking official sports |                       |                     |                             |                           |
+|    |                        | fee, or appointment help, | news outlets or official |                       |                     |                             |                           |
+|    |                        | ask me � this demo uses   | tournament websites for  |                       |                     |                             |                           |
+|    |                        | illustrative data only.   | accurate information. If |                       |                     |                             |                           |
+|    |                        |                           | you have any questions   |                       |                     |                             |                           |
+|    |                        |                           | related to services or   |                       |                     |                             |                           |
+|    |                        |                           | processes, feel free to  |                       |                     |                             |                           |
+|    |                        |                           | ask!                     |                       |                     |                             |                           |
++----+------------------------+---------------------------+--------------------------+-----------------------+---------------------+-----------------------------+---------------------------+
+
+
+
+********************************************************************
+Eval Set Id: appointment-slot-finder
+Eval Id: positive_riyadh_next_week
+Overall Eval Status: PASSED
+---------------------------------------------------------------------
+Metric: tool_trajectory_avg_score, Status: PASSED, Score: 1.0, Threshold: 1.0
+---------------------------------------------------------------------
+Metric: final_response_match_v2, Status: PASSED, Score: 1.0, Threshold: 0.8
+---------------------------------------------------------------------
+Invocation Details:
++----+------------------------+---------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+|    | prompt                 | expected_response         | actual_response           | expected_tool_calls       | actual_tool_calls         | tool_trajectory_avg_score   | final_response_match_v2   |
++====+========================+===========================+===========================+===========================+===========================+=============================+===========================+
+|  0 | Find available         | Available dummy           | Here are the available    | id=None args={}           | id='call_OUSOFHO4uSCtAPhx | Status: PASSED, Score:      | Status: PASSED, Score:    |
+|    | appointment slots in   | appointment slots in      | appointment slots in      | name='list_skills'        | 90v8bbUz' args={}         | 1.0                         | 1.0                       |
+|    | Riyadh between July 20 | Riyadh (July 20�27, 2026, | Riyadh between July 20    | partial_args=None         | name='list_skills'        |                             |                           |
+|    | and July 27, 2026.     | excluding Fri/Sat and     | and July 27, 2026:        | will_continue=None        | partial_args=None         |                             |                           |
+|    |                        | dummy holidays):          | ### Riyadh Central        | id=None                   | will_continue=None        |                             |                           |
+|    |                        | - Riyadh Central          | (Center ID: RYD-01)       | args={'skill_name':       | id='call_ut3ZwS9Gk6ysKodt |                             |                           |
+|    |                        | (RYD-01): July 20 09:00,  | - **July 20, 2026**       | 'appointment-slot-        | rYyqE67v'                 |                             |                           |
+|    |                        | July 20 14:00, July 22    |   - 09:00                 | finder'}                  | args={'skill_name':       |                             |                           |
+|    |                        | 10:00, July 23 11:00,     |   - 14:00                 | name='load_skill'         | 'appointment-slot-        |                             |                           |
+|    |                        | July 27 09:00             | - **July 22, 2026**       | partial_args=None         | finder'}                  |                             |                           |
+|    |                        | - Riyadh North (RYD-02):  |   - 10:00                 | will_continue=None        | name='load_skill'         |                             |                           |
+|    |                        | July 21 10:00, July 22    | - **July 23, 2026**       | id=None                   | partial_args=None         |                             |                           |
+|    |                        | 15:00, July 26 11:00      |   - 11:00                 | args={'skill_name':       | will_continue=None        |                             |                           |
+|    |                        | Illustrative demo data    | - **July 27, 2026**       | 'appointment-slot-        | id='call_Zy1A0lRdg3yhjavy |                             |                           |
+|    |                        | only. Book via official   |   - 09:00                 | finder', 'file_path':     | 8m9OSdw5'                 |                             |                           |
+|    |                        | channels (Absher).        | ### Riyadh North (Center  | 'scripts/find_slots.py',  | args={'skill_name':       |                             |                           |
+|    |                        |                           | ID: RYD-02)               | 'args': {'city':          | 'appointment-slot-        |                             |                           |
+|    |                        |                           | - **July 21, 2026**       | 'Riyadh', 'start-date':   | finder', 'file_path':     |                             |                           |
+|    |                        |                           |   - 10:00                 | '2026-07-20', 'end-date': | 'scripts/find_slots.py',  |                             |                           |
+|    |                        |                           | - **July 22, 2026**       | '2026-07-27'}}            | 'args': {'city':          |                             |                           |
+|    |                        |                           |   - 15:00                 | name='run_skill_script'   | 'Riyadh', 'start-date':   |                             |                           |
+|    |                        |                           | - **July 26, 2026**       | partial_args=None         | '2026-07-20', 'end-date': |                             |                           |
+|    |                        |                           |   - 11:00                 | will_continue=None        | '2026-07-27'}}            |                             |                           |
+|    |                        |                           | Please verify these slots |                           | name='run_skill_script'   |                             |                           |
+|    |                        |                           | and book your             |                           | partial_args=None         |                             |                           |
+|    |                        |                           | appointments via official |                           | will_continue=None        |                             |                           |
+|    |                        |                           | channels such as Absher.  |                           |                           |                             |                           |
++----+------------------------+---------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+
+
+
+********************************************************************
+Eval Set Id: appointment-slot-finder
+Eval Id: negative_routes_to_fee_draft
+Overall Eval Status: PASSED
+---------------------------------------------------------------------
+Metric: tool_trajectory_avg_score, Status: PASSED, Score: 1.0, Threshold: 1.0
+---------------------------------------------------------------------
+Metric: final_response_match_v2, Status: PASSED, Score: 1.0, Threshold: 0.8
+---------------------------------------------------------------------
+Invocation Details:
++----+--------------------------+---------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+|    | prompt                   | expected_response         | actual_response           | expected_tool_calls       | actual_tool_calls         | tool_trajectory_avg_score   | final_response_match_v2   |
++====+==========================+===========================+===========================+===========================+===========================+=============================+===========================+
+|  0 | What's the total fee for | Illustrative fee draft    | The total fee for your    | id=None args={}           | id='call_LYpKxMY3qzBm91d4 | Status: PASSED, Score:      | Status: PASSED, Score:    |
+|    | my iqama renewal with    | (dummy data):             | iqama renewal with three  | name='list_skills'        | dwhvSMM2' args={}         | 1.0                         | 1.0                       |
+|    | three dependents?        | - Primary Iqama renewal:  | dependents is as follows: | partial_args=None         | name='list_skills'        |                             |                           |
+|    |                          | 650 SAR                   | - **Primary Iqama         | will_continue=None        | partial_args=None         |                             |                           |
+|    |                          | - Dependent renewals (3): | renewal:** 650 SAR        | id=None                   | will_continue=None        |                             |                           |
+|    |                          | 1,950 SAR                 | - **Dependent 1           | args={'skill_name':       | id='call_dn7CGi0NdwHkuLys |                             |                           |
+|    |                          | - Subtotal: 2,600 SAR     | renewal:** 650 SAR        | 'government-fee-payment-  | QGaZywUW'                 |                             |                           |
+|    |                          | Draft only � does not     | - **Dependent 2           | draft'} name='load_skill' | args={'skill_name':       |                             |                           |
+|    |                          | submit payment. Verify    | renewal:** 650 SAR        | partial_args=None         | 'government-fee-payment-  |                             |                           |
+|    |                          | via Absher/Muqeem/SADAD.  | - **Dependent 3           | will_continue=None        | draft'} name='load_skill' |                             |                           |
+|    |                          |                           | renewal:** 650 SAR        | id=None                   | partial_args=None         |                             |                           |
+|    |                          |                           | ### **Subtotal:** 2600    | args={'skill_name':       | will_continue=None        |                             |                           |
+|    |                          |                           | SAR                       | 'government-fee-payment-  | id='call_faDnxfQ33fAicYD7 |                             |                           |
+|    |                          |                           | ### **Total:** 2600 SAR   | draft', 'file_path': 'scr | NCmWTKtz'                 |                             |                           |
+|    |                          |                           | Please remember this is a | ipts/compute_fees.py',    | args={'skill_name':       |                             |                           |
+|    |                          |                           | **draft only - does not   | 'args': {'request-type':  | 'government-fee-payment-  |                             |                           |
+|    |                          |                           | submit payment**. Verify  | 'iqama_renewal',          | draft', 'file_path': 'scr |                             |                           |
+|    |                          |                           | all amounts via official  | 'dependents': '3'}}       | ipts/compute_fees.py',    |                             |                           |
+|    |                          |                           | channels such as Absher,  | name='run_skill_script'   | 'args': {'request-type':  |                             |                           |
+|    |                          |                           | Muqeem, or SADAD.         | partial_args=None         | 'iqama_renewal',          |                             |                           |
+|    |                          |                           |                           | will_continue=None        | 'dependents': '3'}}       |                             |                           |
+|    |                          |                           |                           |                           | name='run_skill_script'   |                             |                           |
+|    |                          |                           |                           |                           | partial_args=None         |                             |                           |
+|    |                          |                           |                           |                           | will_continue=None        |                             |                           |
++----+--------------------------+---------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+
+
+
+********************************************************************
+Eval Set Id: appointment-slot-finder
+Eval Id: positive_jeddah_slots
+Overall Eval Status: FAILED
+---------------------------------------------------------------------
+Metric: tool_trajectory_avg_score, Status: FAILED, Score: 0.0, Threshold: 1.0
+---------------------------------------------------------------------
+Metric: final_response_match_v2, Status: PASSED, Score: 1.0, Threshold: 0.8
+---------------------------------------------------------------------
+Invocation Details:
++----+--------------------------+--------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+|    | prompt                   | expected_response        | actual_response           | expected_tool_calls       | actual_tool_calls         | tool_trajectory_avg_score   | final_response_match_v2   |
++====+==========================+==========================+===========================+===========================+===========================+=============================+===========================+
+|  0 | Show me open appointment | Available dummy slots in | Here are the available    | id=None args={}           | id='call_SYuFUGoS1OY7TaHm | Status: FAILED, Score:      | Status: PASSED, Score:    |
+|    | times in Jeddah for the  | Jeddah (week of July 20, | appointment times in      | name='list_skills'        | Lfnc7jha' args={}         | 0.0                         | 1.0                       |
+|    | week of July 20, 2026.   | 2026, excluding weekends | Jeddah for the week of    | partial_args=None         | name='list_skills'        |                             |                           |
+|    |                          | and dummy holidays):     | July 20, 2026:            | will_continue=None        | partial_args=None         |                             |                           |
+|    |                          | - Jeddah Corniche        | ### Jeddah Corniche       | id=None                   | will_continue=None        |                             |                           |
+|    |                          | (JED-01): July 20 11:00, | (Center ID: JED-01)       | args={'skill_name':       | id='call_kqqSRK7PyqyWMDLv |                             |                           |
+|    |                          | July 22 09:00, July 23   | - **July 20, 2026**:      | 'appointment-slot-        | NMFoVzJD'                 |                             |                           |
+|    |                          | 14:00                    | 11:00 AM                  | finder'}                  | args={'skill_name':       |                             |                           |
+|    |                          | - Jeddah South (JED-02): | - **July 22, 2026**:      | name='load_skill'         | 'appointment-slot-        |                             |                           |
+|    |                          | July 21 13:00, July 26   | 09:00 AM                  | partial_args=None         | finder'}                  |                             |                           |
+|    |                          | 09:00                    | - **July 23, 2026**:      | will_continue=None        | name='load_skill'         |                             |                           |
+|    |                          | Demo data only. Verify   | 02:00 PM                  | id=None                   | partial_args=None         |                             |                           |
+|    |                          | and book via Absher.     | ### Jeddah South (Center  | args={'skill_name':       | will_continue=None        |                             |                           |
+|    |                          |                          | ID: JED-02)               | 'appointment-slot-        | id='call_1rogFTfeyIHOIDGt |                             |                           |
+|    |                          |                          | - **July 21, 2026**:      | finder', 'file_path':     | zhbKM160'                 |                             |                           |
+|    |                          |                          | 01:00 PM                  | 'scripts/find_slots.py',  | args={'skill_name':       |                             |                           |
+|    |                          |                          | - **July 26, 2026**:      | 'args': {'city':          | 'appointment-slot-        |                             |                           |
+|    |                          |                          | 09:00 AM                  | 'Jeddah', 'start-date':   | finder', 'file_path':     |                             |                           |
+|    |                          |                          | Please keep in mind that  | '2026-07-20', 'end-date': | 'scripts/find_slots.py',  |                             |                           |
+|    |                          |                          | these times are           | '2026-07-26'}}            | 'args': {'city':          |                             |                           |
+|    |                          |                          | illustrative and should   | name='run_skill_script'   | 'Jeddah', 'start-date':   |                             |                           |
+|    |                          |                          | be verified through       | partial_args=None         | '2026-07-20', 'end-date': |                             |                           |
+|    |                          |                          | official channels such as | will_continue=None        | '2026-07-27'}}            |                             |                           |
+|    |                          |                          | Absher for booking an     |                           | name='run_skill_script'   |                             |                           |
+|    |                          |                          | appointment.              |                           | partial_args=None         |                             |                           |
+|    |                          |                          |                           |                           | will_continue=None        |                             |                           |
++----+--------------------------+--------------------------+---------------------------+---------------------------+---------------------------+-----------------------------+---------------------------+
+
+
+
+
+========== SUMMARY ==========
+iqama-renewal-status: PASS
+traffic-violation-lookup: PASS
+government-fee-payment-draft: PASS
+appointment-slot-finder: PASS

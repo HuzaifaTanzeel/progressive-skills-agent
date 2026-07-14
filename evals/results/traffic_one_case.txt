@@ -1,0 +1,61 @@
+﻿.\.venv\Scripts\python : D:\Learning\Courses\Google X Kaggle Vibe 
+Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\google\adk\evaluation\agent_evaluator.py:153: 
+UserWarning: [EXPERIMENTAL] UserSimulatorProvider: This feature is experimental and may change or be removed in future 
+versions without notice. It may introduce breaking changes at any time.
+At C:\Users\Huzaifa Personal\AppData\Local\Temp\ps-script-41d493f0-860b-47f9-a1ae-f894bb88f8d7.ps1:80 char:118
++ ... -assistant\backend"; $env:PYTHONUTF8='1'; .\.venv\Scripts\python -c "
++                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\Learning\Cou...es at any time.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  user_simulator_provider = UserSimulatorProvider(
+D:\Learning\Courses\Google X Kaggle Vibe 
+Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\google\adk\dependencies\vertexai.py:19: 
+UserWarning: The `vertexai.preview.rag` module is deprecated and will be removed in a future version. Please migrate 
+to the `agentplatform` client. For example:
+
+    import agentplatform
+
+    client = agentplatform.Client(project="your-project", location="us-central1")
+    client.rag.create_corpus(...)
+
+  from vertexai.preview import rag as rag
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\metric_evaluator_registry.py:114: UserWarning: [EXPERIMENTAL] MetricEvaluatorRegistry: This feature 
+is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at 
+any time.
+  metric_evaluator_registry = MetricEvaluatorRegistry()
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\local_eval_service.py:124: UserWarning: [EXPERIMENTAL] UserSimulatorProvider: This feature is 
+experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any 
+time.
+  user_simulator_provider: UserSimulatorProvider = UserSimulatorProvider(),
+D:\Learning\Courses\Google X Kaggle Vibe 
+Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\google\adk\evaluation\agent_evaluator.py:563: 
+UserWarning: [EXPERIMENTAL] LocalEvalService: This feature is experimental and may change or be removed in future 
+versions without notice. It may introduce breaking changes at any time.
+  eval_service = LocalEvalService(
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\simulation\user_simulator_provider.py:77: UserWarning: [EXPERIMENTAL] StaticUserSimulator: This 
+feature is experimental and may change or be removed in future versions without notice. It may introduce breaking 
+changes at any time.
+  return StaticUserSimulator(static_conversation=eval_case.conversation)
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\simulation\static_user_simulator.py:39: UserWarning: [EXPERIMENTAL] UserSimulator: This feature is 
+experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any 
+time.
+  super().__init__(
+D:\Learning\Courses\Google X Kaggle Vibe 
+Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\google\adk\tools\function_tool.py:95: 
+UserWarning: [EXPERIMENTAL] feature FeatureName.JSON_SCHEMA_FOR_FUNC_DECL is enabled.
+  build_function_declaration(
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\metric_evaluator_registry.py:80: UserWarning: [EXPERIMENTAL] FinalResponseMatchV2Evaluator: This 
+feature is experimental and may change or be removed in future versions without notice. It may introduce breaking 
+changes at any time.
+  return evaluator_type(eval_metric=eval_metric)
+D:\Learning\Courses\Google X Kaggle Vibe Coding\Projects\govtech-skills-assistant\backend\.venv\Lib\site-packages\googl
+e\adk\evaluation\final_response_match_v2.py:146: UserWarning: [EXPERIMENTAL] LlmAsJudge: This feature is experimental 
+and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  super().__init__(
+DONE_OK

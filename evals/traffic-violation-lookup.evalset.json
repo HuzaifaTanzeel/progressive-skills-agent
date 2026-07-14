@@ -1,0 +1,206 @@
+{
+  "eval_set_id": "traffic-violation-lookup",
+  "name": "Traffic Violation Lookup Eval Set",
+  "description": "Trigger-accuracy and multi-step tool trajectory checks for traffic-violation-lookup using get_violation_by_code.",
+  "eval_cases": [
+    {
+      "eval_id": "positive_violation_code_101",
+      "expected_skill": "traffic-violation-lookup",
+      "conversation": [
+        {
+          "invocation_id": "positive_violation_code_101",
+          "user_content": {
+            "parts": [
+              {
+                "text": "What is the fine for traffic violation code 101?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Violation code 101 (dummy data): Speeding 20 km/h over the limit. Base fine 300 SAR; early-payment discounted fine 150 SAR (50% dummy discount).\n\nDemo data only. Verify via Absher or SADAD."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "name": "load_skill",
+                "args": {
+                  "skill_name": "traffic-violation-lookup"
+                }
+              },
+              {
+                "name": "get_violation_by_code",
+                "args": {
+                  "code": "101"
+                }
+              }
+            ],
+            "intermediate_responses": []
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "adk_app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "positive_violation_code_205",
+      "expected_skill": "traffic-violation-lookup",
+      "conversation": [
+        {
+          "invocation_id": "positive_violation_code_205",
+          "user_content": {
+            "parts": [
+              {
+                "text": "What is the early-payment fine for violation code 205?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Violation code 205 (dummy data): Running a red light. Base fine 500 SAR; early-payment discounted fine 375 SAR (25% dummy discount).\n\nDemo data only. Verify via Absher or SADAD."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "name": "load_skill",
+                "args": {
+                  "skill_name": "traffic-violation-lookup"
+                }
+              },
+              {
+                "name": "get_violation_by_code",
+                "args": {
+                  "code": "205"
+                }
+              }
+            ],
+            "intermediate_responses": []
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "adk_app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "positive_rephrasing_speeding_ticket",
+      "expected_skill": "traffic-violation-lookup",
+      "conversation": [
+        {
+          "invocation_id": "positive_rephrasing_speeding_ticket",
+          "user_content": {
+            "parts": [
+              {
+                "text": "I got a speeding ticket coded 101 — what do I pay if I settle early?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Violation code 101 (dummy data): Speeding 20 km/h over the limit. Base fine 300 SAR; early-payment discounted fine 150 SAR.\n\nIllustrative demo data only. Verify via Absher or SADAD."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "name": "load_skill",
+                "args": {
+                  "skill_name": "traffic-violation-lookup"
+                }
+              },
+              {
+                "name": "get_violation_by_code",
+                "args": {
+                  "code": "101"
+                }
+              }
+            ],
+            "intermediate_responses": []
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "adk_app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "negative_routes_to_fee_draft",
+      "expected_skill": "government-fee-payment-draft",
+      "conversation": [
+        {
+          "invocation_id": "negative_routes_to_fee_draft",
+          "user_content": {
+            "parts": [
+              {
+                "text": "How much do I owe in total for my traffic violations and iqama renewal?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Illustrative combined fee draft (dummy data — not a real payment):\n\n- Iqama renewal (primary): 650 SAR\n- Dependent renewals (2): 1,300 SAR\n- Traffic violation 101 (early payment): 150 SAR\n- Traffic violation 205 (early payment): 375 SAR\n- Subtotal: 2,475 SAR\n\nDraft summary only — does not submit payment. Verify via Absher/Muqeem/SADAD."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "name": "load_skill",
+                "args": {
+                  "skill_name": "government-fee-payment-draft"
+                }
+              },
+              {
+                "name": "get_fee_schedule",
+                "args": {}
+              },
+              {
+                "name": "get_violation_by_code",
+                "args": {
+                  "code": "101"
+                }
+              },
+              {
+                "name": "get_violation_by_code",
+                "args": {
+                  "code": "205"
+                }
+              }
+            ],
+            "intermediate_responses": []
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "adk_app",
+        "user_id": "eval_user",
+        "state": {}
+      },
+      "expected_skill_not": "traffic-violation-lookup"
+    }
+  ]
+}
