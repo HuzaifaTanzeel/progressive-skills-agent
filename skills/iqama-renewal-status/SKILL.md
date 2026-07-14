@@ -1,8 +1,8 @@
 ---
 name: iqama-renewal-status
 description: |
-  Iqama/residency renewal docs, expiry, grace-period eligibility, steps. Use when asking what to prepare or whether standard renewal still applies. Do NOT use for fee totals or payment quotes — use government-fee-payment-draft.
-version: 1.1.0
+  Iqama renewal docs, expiry, grace eligibility, steps - not fees. Never for cost/total/how-much quotes (use government-fee-payment-draft).
+version: 1.1.1
 license: MIT
 tier: read-only
 allowed-tools: ""

@@ -1,8 +1,8 @@
 ---
 name: government-fee-payment-draft
 description: |
-  Draft how-much-I-owe / combined totals (iqama+dependents or traffic+iqama). Draft-only. Not for single-code early-pay/settle-early — use traffic-violation-lookup.
-version: 1.1.2
+  Cost/total to renew iqama with dependents, or how-much-I-owe totals. Draft-only. Not appointments/eligibility; not single-code early-pay (traffic-violation-lookup).
+version: 1.1.3
 license: MIT
 tier: draft-only
 allowed-tools: ""
