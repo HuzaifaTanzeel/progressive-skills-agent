@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "govtech-skills-assistant"
+version = "0.1.0"
+description = "Saudi GovTech citizen services demo - ADK agent with Agent Skills and EDD evals"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "google-adk[db,eval]==2.4.0",
+    "litellm>=1.82.9,!=1.82.7,!=1.82.8",
+    "fastapi",
+    "uvicorn",
+    "python-dotenv",
+    "pytest",
+    "pytest-asyncio",
+    "pandas",
+    "tabulate",
+    "tiktoken",
+    "aiosqlite",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest-asyncio",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["adk_app", "harness", "server"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+markers = [
+    "llm: tests that call an LLM / require OPENAI_API_KEY",
+]
