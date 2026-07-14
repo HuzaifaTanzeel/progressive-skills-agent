@@ -49,9 +49,13 @@ After this skill is loaded, these FunctionTools become available:
    - `dependents` from the user as an integer (use `2` only as the demo
      default for combined owe/totals that omit a dependent count)
    - `violation_codes` only when step 2 applies (e.g. `"101,205"`)
+   - Leave `include_express` false / omit it unless the user explicitly asks
+     for express processing. Combined owe/totals must **not** add the 100 SAR
+     express add-on (demo default subtotal is 2,475 SAR without express).
    - Do not ask clarifying questions for this demo's combined-total pattern.
-4. Present the draft breakdown and `draft_id` from the tool JSON. State
-   clearly this is a draft only — not a payment. Never call `submit_payment`.
+4. Present the draft breakdown and `draft_id` from the tool JSON **exactly**
+   (use tool line items and `total_sar`; do not invent or add express). State
+   clearly this is a draft only - not a payment. Never call `submit_payment`.
 
 ## Output format
 
@@ -69,4 +73,5 @@ After this skill is loaded, these FunctionTools become available:
 - Calling the same violation code repeatedly after a successful lookup.
 - Answering single-code violation lookups without the fee draft tools when
   only one code is asked (route to traffic-violation-lookup).
+- Setting `include_express=true` unless the user asked for express.
 - Omitting draft-only disclaimer.

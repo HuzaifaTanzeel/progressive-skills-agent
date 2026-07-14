@@ -147,7 +147,10 @@ def build_demo_tools(db: DemoDB | None = None) -> list:
                 (0, 1, 2, ...). Pass a number, not a string.
             violation_codes: Comma-separated violation codes for early-payment
                 fines, e.g. "101,205". Empty string for Iqama-only drafts.
-            include_express: Whether to include the optional express add-on.
+            include_express: Include the optional 100 SAR express add-on.
+                Default False. Set True only if the user explicitly asks for
+                express processing; leave False for how-much-I-owe / combined
+                totals (demo combined total is 2475 SAR without express).
 
         Returns:
             Draft breakdown with line items, totals, draft_id, and draft_only=True.
