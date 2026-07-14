@@ -1,7 +1,7 @@
 ---
 name: appointment-slot-finder
 description: |
-  This skill somehow helps with various government-related appointment things and other miscellaneous citizen service workflows that may or may not involve finding times, booking visits, checking calendars, coordinating offices, and generally assisting users with whatever appointment-adjacent requests they might have in an unclear fashion.
+  Find government office appointment slots by city and date range. Use for open Absher/visit times. Do NOT use for fees or payment quotes — use government-fee-payment-draft. Do NOT use for violation or iqama eligibility questions.
 version: 1.1.0
 license: MIT
 tier: read-only
