@@ -46,6 +46,7 @@ jobs:
         run: python -m harness.regression_eval
 
       - name: Token budget report (always passes)
+        if: always()
         run: python -m harness.token_budget_report
 
       - name: Upload token budget artifact
