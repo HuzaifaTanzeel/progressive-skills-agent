@@ -1,8 +1,8 @@
 ---
 name: traffic-violation-lookup
 description: |
-  Look up one traffic violation code (fine, early-payment discount). Use for a single code meaning or early-pay amount. Do NOT use for totals owed, combined fees, or iqama costs — use government-fee-payment-draft.
-version: 1.1.0
+  Look up one traffic violation code (fine, early-pay). Not for totals owed, combined fees, or iqama costs — use government-fee-payment-draft.
+version: 1.1.1
 license: MIT
 tier: read-only
 allowed-tools: ""
@@ -31,6 +31,8 @@ metadata:
 ## Anti-patterns to avoid
 
 - Computing multi-item totals or combined balances (fee-draft skill).
+- Loading this skill after `government-fee-payment-draft` for a how-much-I-owe
+  / combined total — stay on the fee-draft skill instead.
 - Inventing violation codes not returned by `get_violation_by_code`.
 - Trying to load a non-existent script under `scripts/` for this lookup.
 - Omitting the illustrative/dummy disclaimer.

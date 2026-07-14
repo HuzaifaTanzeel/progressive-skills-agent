@@ -1,8 +1,8 @@
 ---
 name: government-fee-payment-draft
 description: |
-  Draft how-much-I-owe fee totals (iqama, dependents, combined). Draft-only; never submits. Do NOT use for single violation lookup (traffic-violation-lookup) or renewal docs (iqama-renewal-status).
-version: 1.1.0
+  Draft how-much-I-owe totals (iqama, dependents, traffic+iqama). Draft-only; never submits. Not for single-code lookup or renewal docs.
+version: 1.1.1
 license: MIT
 tier: draft-only
 allowed-tools: ""
@@ -31,12 +31,17 @@ After this skill is loaded, these FunctionTools become available:
 `get_fee_schedule`, `get_violation_by_code`, `create_payment_draft`, and
 `submit_payment` (forbidden). Do **not** use `run_skill_script`.
 
+**Stay on this skill until the draft is done.** Do not call `load_skill` again
+(especially not `traffic-violation-lookup`) — that unloads these tools.
+`get_violation_by_code` is already available here for combined totals.
+
 1. Call `get_fee_schedule` to load Iqama fee lines from the demo DB.
 2. Violation codes are optional:
    - If the user gives explicit violation codes, call `get_violation_by_code`
-     for each code.
+     for each code **once**.
    - If the user asks a combined owe/total for traffic violations + iqama
-     without codes, use demo defaults `101` and `205` and look those up.
+     without codes, use demo defaults `101` and `205` and look those up once
+     each via `get_violation_by_code` (still on this skill).
    - If the request is Iqama-only (renewal cost with dependents, or
      pay/submit my iqama fees now), do **not** add violation codes and do
      **not** call `get_violation_by_code`.
@@ -57,8 +62,11 @@ After this skill is loaded, these FunctionTools become available:
 ## Anti-patterns to avoid
 
 - Calling `submit_payment` under any circumstance.
+- Calling `load_skill` again after this skill is loaded (especially
+  `traffic-violation-lookup` mid-draft). That tears down fee tools.
 - Inventing SAR amounts instead of using tool results.
 - Skipping `get_violation_by_code` when violation codes are part of the total.
+- Calling the same violation code repeatedly after a successful lookup.
 - Answering single-code violation lookups without the fee draft tools when
   only one code is asked (route to traffic-violation-lookup).
 - Omitting draft-only disclaimer.

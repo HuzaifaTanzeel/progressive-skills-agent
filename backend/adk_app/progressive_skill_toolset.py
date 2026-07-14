@@ -40,7 +40,8 @@ _COMPACT_SKILL_INSTRUCTION = (
     "3. load_skill_resource is only for files under that skill's "
     "references/, assets/, or scripts/. run_skill_script runs scripts/.\n"
     "4. Only one skill stays active: loading another unloads the previous. "
-    "Call unload_skill when the topic changes or a workflow is finished.\n"
+    "Do not load a second skill mid-workflow — finish the current runbook "
+    "first. Call unload_skill when the topic changes or a workflow is done.\n"
     "5. On load_skill / resource / script errors, report them; do not invent "
     "a substitute answer from general knowledge."
 )

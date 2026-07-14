@@ -1,8 +1,15 @@
 name: backend-ci
 
+# Run once per change: PRs via pull_request; main via push.
+# Avoids duplicate push+pull_request runs on the same PR branch.
 on:
   push:
+    branches: [main]
   pull_request:
+
+concurrency:
+  group: backend-ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   unit-and-schema:

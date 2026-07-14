@@ -3,10 +3,18 @@ name: skills-ci
 # Full EDD gate for Agent Skills. Requires repo secret OPENAI_API_KEY
 # (Settings → Secrets and variables → Actions). Without it, LLM steps fail
 # closed so silent skips cannot greenwash trajectory regressions.
+#
+# Run once per change: PRs via pull_request; main via push.
+# Avoids duplicate push+pull_request runs on the same PR branch.
 
 on:
   push:
+    branches: [main]
   pull_request:
+
+concurrency:
+  group: skills-ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   skills-edd:
