@@ -68,9 +68,7 @@ async def run_regression() -> list[StepResult]:
             )
 
             for skill_id in present_list:
-                statuses, skipped = await run_eval_set(
-                    agent, skill_id, present_set, retries=1
-                )
+                statuses, skipped = await run_eval_set(agent, skill_id, present_set)
                 step.skipped.extend(skipped)
 
                 passed_ids = {

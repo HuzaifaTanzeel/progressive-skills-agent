@@ -90,14 +90,8 @@ async def run_eval_set(
     agent: BaseAgent,
     skill_id: str,
     present_skills: set[str],
-    *,
-    retries: int = 0,
 ) -> tuple[dict[str, EvalStatus], list[str]]:
-    """Run filtered eval cases for *skill_id*; return per-case status and skips.
-
-    *retries* re-runs each failed case up to N extra times (LLM flake cushion).
-    A case passes if any attempt passes.
-    """
+    """Run filtered eval cases for *skill_id*; return per-case status and skips."""
     eval_set = load_eval_set(skill_id)
     eval_config = load_skill_config(skill_id)
     filtered, skipped = filter_runnable_cases(eval_set, present_skills)
@@ -106,39 +100,15 @@ async def run_eval_set(
         return {}, skipped
 
     eval_metrics = get_eval_metrics_from_config(eval_config)
+    results_by_id = await AgentEvaluator._get_eval_results_by_eval_id(
+        agent_for_eval=agent,
+        eval_set=filtered,
+        eval_metrics=eval_metrics,
+        num_runs=1,
+        user_simulator_provider=UserSimulatorProvider(),
+    )
 
-    async def _run(cases: list[EvalCase]) -> dict[str, EvalStatus]:
-        subset = filtered.model_copy(update={"eval_cases": cases})
-        results_by_id = await AgentEvaluator._get_eval_results_by_eval_id(
-            agent_for_eval=agent,
-            eval_set=subset,
-            eval_metrics=eval_metrics,
-            num_runs=1,
-            user_simulator_provider=UserSimulatorProvider(),
-        )
-        return {
-            eval_id: case_results[0].final_eval_status
-            for eval_id, case_results in results_by_id.items()
-        }
-
-    statuses = await _run(list(filtered.eval_cases))
-
-    for _ in range(max(0, retries)):
-        failed_ids = {
-            eid for eid, st in statuses.items() if st != EvalStatus.PASSED
-        }
-        if not failed_ids:
-            break
-        retry_cases = [
-            c for c in filtered.eval_cases if c.eval_id in failed_ids
-        ]
-        print(
-            f"Retrying {len(retry_cases)} failed case(s) for {skill_id}: "
-            f"{sorted(failed_ids)}"
-        )
-        retry_statuses = await _run(retry_cases)
-        for eid, st in retry_statuses.items():
-            if st == EvalStatus.PASSED:
-                statuses[eid] = st
-
+    statuses: dict[str, EvalStatus] = {}
+    for eval_id, case_results in results_by_id.items():
+        statuses[eval_id] = case_results[0].final_eval_status
     return statuses, skipped
