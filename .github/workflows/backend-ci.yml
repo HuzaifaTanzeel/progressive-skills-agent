@@ -1,11 +1,22 @@
 name: backend-ci
 
-# Run once per change: PRs via pull_request; main via push.
-# Avoids duplicate push+pull_request runs on the same PR branch.
+# Fast, LLM-free unit/schema checks. Skips frontend-only and docs-only changes.
+
 on:
   push:
     branches: [main]
+    paths:
+      - "backend/**"
+      - "skills/**"
+      - "evals/**"
+      - ".github/workflows/backend-ci.yml"
   pull_request:
+    paths:
+      - "backend/**"
+      - "skills/**"
+      - "evals/**"
+      - ".github/workflows/backend-ci.yml"
+  workflow_dispatch:
 
 concurrency:
   group: backend-ci-${{ github.event.pull_request.number || github.ref }}

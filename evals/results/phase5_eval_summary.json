@@ -80,7 +80,8 @@
           ],
           "source_file": "adk_app_iqama-renewal-status_1784034328.4963603.evalset_result.json"
         }
-      ]
+      ],
+      "owner": "citizen-services-content-team"
     },
     {
       "skill_id": "traffic-violation-lookup",
@@ -196,7 +197,8 @@
           ],
           "source_file": "adk_app_traffic-violation-lookup_1784034403.8659692.evalset_result.json"
         }
-      ]
+      ],
+      "owner": "citizen-services-content-team"
     },
     {
       "skill_id": "government-fee-payment-draft",
@@ -312,7 +314,8 @@
           ],
           "source_file": "adk_app_government-fee-payment-draft_1784034483.3496418.evalset_result.json"
         }
-      ]
+      ],
+      "owner": "citizen-services-content-team"
     },
     {
       "skill_id": "appointment-slot-finder",
@@ -428,7 +431,8 @@
           ],
           "source_file": "adk_app_appointment-slot-finder_1784034567.1436005.evalset_result.json"
         }
-      ]
+      ],
+      "owner": "citizen-services-content-team"
     }
   ],
   "adversarial": [

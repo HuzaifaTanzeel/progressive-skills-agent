@@ -15,7 +15,10 @@ from server.routes_chat import router as chat_router
 
 BACKEND_DIR = Path(__file__).resolve().parent.parent
 SERVER_DIR = Path(__file__).resolve().parent
-SESSIONS_DB = SERVER_DIR / "sessions.db"
+SESSIONS_DB = Path(
+    os.environ.get("SESSIONS_DB_PATH", str(SERVER_DIR / "sessions.db"))
+)
+SESSIONS_DB.parent.mkdir(parents=True, exist_ok=True)
 
 # Absolute path for sqlite+aiosqlite (forward slashes work on Windows).
 SESSION_SERVICE_URI = f"sqlite+aiosqlite:///{SESSIONS_DB.as_posix()}"

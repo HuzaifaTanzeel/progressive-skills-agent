@@ -1,0 +1,31 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      # Required for chat / LLM evals. Copy .env.example → .env and set the key.
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      LITELLM_MODEL: ${LITELLM_MODEL:-openai/gpt-4o-mini}
+      PYTHONUTF8: "1"
+      # Session DB path (writable volume)
+      SESSIONS_DB_PATH: /data/sessions.db
+    volumes:
+      - backend-data:/data
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+      args:
+        # Browser calls the API from the host, not the Docker network name
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  backend-data:

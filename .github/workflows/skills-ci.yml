@@ -1,16 +1,27 @@
 name: skills-ci
 
-# Full EDD gate for Agent Skills. Requires repo secret OPENAI_API_KEY
-# (Settings → Secrets and variables → Actions). Without it, LLM steps fail
-# closed so silent skips cannot greenwash trajectory regressions.
+# Full EDD gate for Agent Skills (LLM calls + OpenAI spend).
+# Requires repo secret OPENAI_API_KEY (Settings → Secrets and variables → Actions).
+# Without it, LLM steps fail closed so silent skips cannot greenwash regressions.
 #
-# Run once per change: PRs via pull_request; main via push.
-# Avoids duplicate push+pull_request runs on the same PR branch.
+# Path-filtered: does NOT run on frontend-only (or docs-only) changes.
+# Use workflow_dispatch to force a full EDD run when needed.
 
 on:
   push:
     branches: [main]
+    paths:
+      - "skills/**"
+      - "evals/**"
+      - "backend/**"
+      - ".github/workflows/skills-ci.yml"
   pull_request:
+    paths:
+      - "skills/**"
+      - "evals/**"
+      - "backend/**"
+      - ".github/workflows/skills-ci.yml"
+  workflow_dispatch:
 
 concurrency:
   group: skills-ci-${{ github.event.pull_request.number || github.ref }}

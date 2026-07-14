@@ -1,4 +1,4 @@
-# Backend - Python environment
+# Backend — Python environment
 
 This project uses **uv** as the recommended package manager, with **pip + venv** as a fallback (especially on Windows).
 
@@ -9,139 +9,121 @@ This project uses **uv** as the recommended package manager, with **pip + venv**
 
 ## Setup with uv (recommended)
 
-```powershell
+`powershell
 cd backend
 uv venv
-.venv\Scripts\Activate.ps1
+.\.venv\Scripts\Activate.ps1
 uv pip install -e .
-```
+`
 
 ## Setup with pip + venv (fallback)
 
-```powershell
+`powershell
 cd backend
 python -m venv .venv
-.venv\Scripts\Activate.ps1
+.\.venv\Scripts\Activate.ps1
 pip install -e .
-```
+`
 
 ## Environment variables
 
-ADK loads `.env` from the agent directory. Copy the example file and set your API key:
+ADK loads dk_app/.env from the agent directory. Copy the example and set your API key:
 
-```powershell
+`powershell
 copy adk_app\.env.example adk_app\.env
-```
+`
 
 | Variable | Purpose |
 |----------|---------|
-| `OPENAI_API_KEY` | OpenAI API key for LiteLLM |
-| `LITELLM_MODEL` | Model string (default: `openai/gpt-4o-mini`) |
-| `PYTHONUTF8` | Set to `1` on Windows to avoid LiteLLM encoding errors |
+| OPENAI_API_KEY | OpenAI API key for LiteLLM |
+| LITELLM_MODEL | Model string (default: openai/gpt-4o-mini) |
+| PYTHONUTF8 | Set to 1 on Windows to avoid LiteLLM encoding errors |
+| SESSIONS_DB_PATH | Optional override for the SQLite session DB path (used in Docker) |
 
 ## Verify install
 
-```powershell
+`powershell
 python -c "import google.adk; import litellm; print(google.adk.__version__)"
-```
+`
 
-Expected output: `2.4.0`
+Expected output: 2.4.0
 
-## Run agent
+## Run the agent
 
-From `backend/` with the venv activated:
+From ackend/ with the venv activated:
 
-```powershell
+`powershell
 # Interactive CLI chat
 adk run adk_app
 
 # Browser UI (dev only)
 adk web --port 8000
-```
+`
 
 Open http://localhost:8000, select **govtech_assistant**, and send a message.
 
-From the repo root, you can also run:
-
-```powershell
-adk run backend/adk_app
-```
-
-
 ## FastAPI server (custom UI + admin)
 
-From `backend/` with the venv activated:
+From ackend/ with the venv activated:
 
-```powershell
+`powershell
 uvicorn server.main:app --host 127.0.0.1 --port 8000
-```
+`
 
-- ADK Dev UI: http://localhost:8000 (select `adk_app`)
+- ADK Dev UI: http://localhost:8000 (select dk_app)
 - Interactive docs: http://localhost:8000/docs
-- Admin eval summary: `GET /api/admin/eval-summary`
-- Simplified chat: `POST /api/chat` with `{"message": "..."}` → `{response, skill_used, tool_trajectory, session_id}`
-- Default ADK chat still available at `POST /run` / `POST /run_sse` (full Event arrays)
+- Admin eval summary: GET /api/admin/eval-summary
+- Simplified chat: POST /api/chat with {"message": "..."}
 
-Sessions persist in `server/sessions.db` (gitignored).
+Sessions persist in server/sessions.db locally (or $SESSIONS_DB_PATH in Docker).
 
 ### Refresh admin JSON reports
 
-```powershell
+`powershell
 python -m harness.phase5_summary
-python -m harness.token_budget_report  # also writes token_budget_report.json
-# LLM required:
+python -m harness.token_budget_report
 python -m harness.regression_eval
-```
+`
 
-Reports land in `../evals/results/*.json` for the admin endpoint.
+Reports land in ../evals/results/*.json for the admin endpoint.
+
+## Docker
+
+Prefer repo-root Compose (frontend + backend together). Backend-only:
+
+`powershell
+# from repo root
+docker build -f backend/Dockerfile -t govtech-backend .
+docker run --rm -p 8000:8000 -e OPENAI_API_KEY=sk-... govtech-backend
+`
+
+See the [root README](../README.md#docker-compose) for docker compose up.
 
 ## Pinned dependencies
 
-- `google-adk[db,eval]==2.4.0` - ADK 2.x with experimental Skills support (`SkillToolset`)
-- `litellm` - excludes compromised versions 1.82.7 / 1.82.8 (see [ADK security advisory](https://github.com/google/adk-python/issues/5005))
-- `tiktoken` - token counting for harness token-budget report
+- google-adk[db,eval]==2.4.0 — ADK 2.x with experimental Skills (SkillToolset)
+- litellm — excludes compromised versions 1.82.7–1.82.8
+- 	iktoken — token counting for harness token-budget report
 
 ## Eval harness (pytest)
 
-```powershell
-# Skill frontmatter lint (CLI; also covered by test_skill_frontmatter.py)
+`powershell
 python -m harness.lint_skills
-
-# Fast suite: tools/DB, progressive skills, frontmatter (no API key)
 python -m pytest -m "not llm" -v
-
-# LLM suite only: ADK evals + adversarial + offtopic (needs OPENAI_API_KEY)
 python -m pytest -m llm -v
-```
+`
 
-LLM tests are marked `@pytest.mark.llm` (registered in `pyproject.toml`). CI splits the same way: `backend-ci` runs `-m "not llm"`; `skills-ci` runs the full EDD gate and **requires** the `OPENAI_API_KEY` repository secret.
+CI: ackend-ci runs -m "not llm"; skills-ci requires OPENAI_API_KEY.
 
-Domain tools live in `adk_app/demo_tools.py` and read an in-memory seed DB from
-`adk_app/demo_db.py` (process lifetime only). Skills instruct which tools to
-call; see repo-root `AGENTS.md`.
-
-Context budget (Agent Skills whitepaper):
-- **L1 always-on** — skill name+description in the system prompt; no `list_skills` discovery round-trip.
-- **Capability Profile swap** — one active skill (`unload_skill` / replace-on-load).
-- **Event compaction** — ADK `App` summarizes older L2 bodies so history does not grow forever.
+Domain tools: dk_app/demo_tools.py + in-memory dk_app/demo_db.py. See repo-root AGENTS.md.
 
 ## Analysis harness scripts
 
-From `backend/` with venv activated:
-
-```powershell
-# Skill frontmatter lint (L1 description budget via tiktoken)
+`powershell
 python -m harness.lint_skills
+python -m harness.token_budget_report
+python -m harness.regression_eval
+python -m harness.phase5_summary
+`
 
-# Token budget comparison (no API calls; uses tiktoken)
-python -m harness.token_budget_report  # also writes token_budget_report.json
-
-# Incremental skill-library regression eval (requires OPENAI_API_KEY)
-python -m harness.regression_eval  # writes .md + regression_eval_report.json
-python -m harness.phase5_summary  # writes phase5_eval_summary.json from ADK eval_history
-```
-
-The regression eval adds skills one at a time (iqama → traffic → fee-draft → appointment) in a temp copy of `skills/`, re-running eval cases for already-present skills at each step. Cross-skill routing cases are skipped until their referenced skills exist.
-
-Reports land in `evals/results/`. At only four skills, token savings in the budget report will look modest vs the whitepaper's 50-skill example — that is expected.
-
+Reports land in evals/results/. Keep curated .md/.json only — ephemeral *.txt dumps are gitignored.
