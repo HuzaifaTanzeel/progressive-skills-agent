@@ -4,17 +4,12 @@ name: skills-ci
 # Requires repo secret OPENAI_API_KEY (Settings → Secrets and variables → Actions).
 # Without it, LLM steps fail closed so silent skips cannot greenwash regressions.
 #
-# Path-filtered: does NOT run on frontend-only (or docs-only) changes.
-# Use workflow_dispatch to force a full EDD run when needed.
+# Cost controls:
+# - pull_request only (not push to main) so a merge does not re-spend tokens after PR CI.
+# - Path-filtered: does NOT run on docs/README/frontend-only changes.
+# - workflow_dispatch to force a full EDD run on main when needed.
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "skills/**"
-      - "evals/**"
-      - "backend/**"
-      - ".github/workflows/skills-ci.yml"
   pull_request:
     paths:
       - "skills/**"
