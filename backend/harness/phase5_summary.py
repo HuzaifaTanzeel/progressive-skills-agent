@@ -26,6 +26,14 @@ SKILL_TIERS: dict[str, str] = {
     "appointment-slot-finder": "read-only",
 }
 
+# metadata.author from each skill's SKILL.md frontmatter.
+SKILL_OWNERS: dict[str, str] = {
+    "iqama-renewal-status": "citizen-services-content-team",
+    "traffic-violation-lookup": "citizen-services-content-team",
+    "government-fee-payment-draft": "citizen-services-content-team",
+    "appointment-slot-finder": "citizen-services-content-team",
+}
+
 SKILL_ORDER = [
     "iqama-renewal-status",
     "traffic-violation-lookup",
@@ -140,6 +148,7 @@ def build_summary(
         skills.append({
             "skill_id": skill_id,
             "tier": SKILL_TIERS.get(skill_id, "unknown"),
+            "owner": SKILL_OWNERS.get(skill_id, "unknown"),
             "trajectory_mode": _trajectory_mode(manifest, skill_id),
             "accuracy": round(accuracy, 4),
             "passed": passed,

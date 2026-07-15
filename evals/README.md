@@ -20,7 +20,7 @@ Manifest: `evals/eval_config.json`. ADK-compatible configs: `evals/configs/<skil
 
 | Skill | `tool_trajectory_avg_score` | `final_response_match_v2` |
 |-------|----------------------------|---------------------------|
-| iqama-renewal-status | threshold 1.0, **IN_ORDER** (incl. `load_skill_resource`) | threshold 0.8 |
+| iqama-renewal-status | threshold 1.0, **ANY_ORDER** (incl. `load_skill_resource`) | threshold 0.8 |
 | traffic-violation-lookup | threshold 1.0, **ANY_ORDER** | threshold 0.8 |
 | government-fee-payment-draft | threshold 1.0, **IN_ORDER** | threshold 0.8 |
 | appointment-slot-finder | threshold 1.0, **IN_ORDER** | threshold 0.8 |
@@ -37,8 +37,9 @@ Manifest: `evals/eval_config.json`. ADK-compatible configs: `evals/configs/<skil
 2. Run evals against a weak or outdated SKILL.md → expect trajectory **0.0**
    when order is wrong, centers are invented, or `submit_payment` is called.
 3. Tighten the skill runbook until trajectories pass.
-4. Keep documenting fail→fix in `evals/results/` so the community story is
-   evidence-backed (not a wall of 1.0 scores with shallow goldens).
+4. Keep documenting fail→fix in curated `evals/results/*.md` reports so the
+   community story is evidence-backed (not a wall of 1.0 scores with shallow
+   goldens). Ephemeral CLI dumps (`*.txt`) are gitignored — do not commit them.
 
 ### Critical cases that bite without good runbooks
 
@@ -95,4 +96,11 @@ cd backend
 python -m harness.generate_multistep_evals
 ```
 
-Then re-run pytest and update `evals/results/` reports.
+Then re-run pytest and refresh curated reports:
+
+```powershell
+python -m harness.phase5_summary
+python -m harness.token_budget_report
+```
+
+See [`evals/results/README.md`](results/README.md) for which files belong in git.

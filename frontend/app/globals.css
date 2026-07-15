@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0c1f24;
+  --ink-raised: #143036;
+  --ink-muted: #1e454d;
+  --sand: #e8e0d4;
+  --sand-dim: #b8aea0;
+  --teal: #2a9d8f;
+  --teal-bright: #3dbeb0;
+  --badge-readonly-bg: #334155;
+  --badge-readonly-fg: #e2e8f0;
+  --badge-draft-bg: #92400e;
+  --badge-draft-fg: #fef3c7;
+  --danger: #e07a5f;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-raised: var(--ink-raised);
+  --color-ink-muted: var(--ink-muted);
+  --color-sand: var(--sand);
+  --color-sand-dim: var(--sand-dim);
+  --color-teal: var(--teal);
+  --color-teal-bright: var(--teal-bright);
+  --color-badge-readonly-bg: var(--badge-readonly-bg);
+  --color-badge-readonly-fg: var(--badge-readonly-fg);
+  --color-badge-draft-bg: var(--badge-draft-bg);
+  --color-badge-draft-fg: var(--badge-draft-fg);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-fraunces);
+}
+
+body {
+  background: var(--ink);
+  color: var(--sand);
+  font-family: var(--font-dm-sans), ui-sans-serif, sans-serif;
+}

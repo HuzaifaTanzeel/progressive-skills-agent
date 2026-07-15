@@ -138,9 +138,10 @@ def build_demo_tools(db: DemoDB | None = None) -> list:
     ) -> dict[str, Any]:
         """Create a draft-only fee breakdown using demo fee and violation tables.
 
-        Never submits payment. Returns a draft_id for human review. Call
-        get_fee_schedule first, and call get_violation_by_code for each
-        violation code before creating a combined draft.
+        Never submits payment. Returns a draft_id for human review. You must
+        call get_fee_schedule in this turn before this tool (do not skip).
+        Call get_violation_by_code for each violation code before creating a
+        combined draft.
 
         Args:
             dependents: Number of dependent renewals as an integer
