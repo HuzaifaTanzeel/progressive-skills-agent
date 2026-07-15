@@ -1,15 +1,13 @@
 name: backend-ci
 
-# Fast, LLM-free unit/schema checks. Skips frontend-only and docs-only changes.
+# Fast, LLM-free unit/schema checks.
+#
+# Cost / noise controls:
+# - pull_request only (not push to main) so merge does not re-run after PR CI.
+# - Path-filtered: skips docs/README/frontend-only changes.
+# - workflow_dispatch for a manual check on main if needed.
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "backend/**"
-      - "skills/**"
-      - "evals/**"
-      - ".github/workflows/backend-ci.yml"
   pull_request:
     paths:
       - "backend/**"
