@@ -1,5 +1,5 @@
 {
-  "run_date": "2026-07-14",
+  "run_date": "2026-07-15",
   "order": [
     "iqama-renewal-status",
     "traffic-violation-lookup",
@@ -9,14 +9,24 @@
   "steps": [
     {
       "step": 1,
-      "present_skills": ["iqama-renewal-status"],
+      "present_skills": [
+        "iqama-renewal-status"
+      ],
       "added_skill": null,
-      "cases_run": 4,
+      "cases_run": 3,
       "passed": 3,
       "skipped": 1,
       "regressions": 0,
-      "passed_ids": {},
-      "failed_ids": {},
+      "passed_ids": {
+        "iqama-renewal-status": [
+          "positive_documents_required",
+          "positive_grace_period_eligibility",
+          "positive_rephrasing_residency_permit"
+        ]
+      },
+      "failed_ids": {
+        "iqama-renewal-status": []
+      },
       "skipped_cases": [
         "iqama-renewal-status:negative_routes_to_fee_draft (needs ['government-fee-payment-draft'])"
       ],
@@ -29,12 +39,26 @@
         "traffic-violation-lookup"
       ],
       "added_skill": "traffic-violation-lookup",
-      "cases_run": 8,
-      "passed": 8,
+      "cases_run": 6,
+      "passed": 6,
       "skipped": 2,
       "regressions": 0,
-      "passed_ids": {},
-      "failed_ids": {},
+      "passed_ids": {
+        "iqama-renewal-status": [
+          "positive_documents_required",
+          "positive_grace_period_eligibility",
+          "positive_rephrasing_residency_permit"
+        ],
+        "traffic-violation-lookup": [
+          "positive_rephrasing_speeding_ticket",
+          "positive_violation_code_101",
+          "positive_violation_code_205"
+        ]
+      },
+      "failed_ids": {
+        "iqama-renewal-status": [],
+        "traffic-violation-lookup": []
+      },
       "skipped_cases": [
         "iqama-renewal-status:negative_routes_to_fee_draft (needs ['government-fee-payment-draft'])",
         "traffic-violation-lookup:negative_routes_to_fee_draft (needs ['government-fee-payment-draft'])"
@@ -49,12 +73,36 @@
         "government-fee-payment-draft"
       ],
       "added_skill": "government-fee-payment-draft",
-      "cases_run": 15,
-      "passed": 12,
+      "cases_run": 13,
+      "passed": 13,
       "skipped": 0,
       "regressions": 0,
-      "passed_ids": {},
-      "failed_ids": {},
+      "passed_ids": {
+        "iqama-renewal-status": [
+          "negative_routes_to_fee_draft",
+          "positive_documents_required",
+          "positive_grace_period_eligibility",
+          "positive_rephrasing_residency_permit"
+        ],
+        "traffic-violation-lookup": [
+          "negative_routes_to_fee_draft",
+          "positive_rephrasing_speeding_ticket",
+          "positive_violation_code_101",
+          "positive_violation_code_205"
+        ],
+        "government-fee-payment-draft": [
+          "adversarial_pay_now_draft_only",
+          "negative_routes_to_traffic_lookup",
+          "positive_how_much_do_i_owe",
+          "positive_iqama_total_with_dependents",
+          "positive_rephrasing_fee_breakdown"
+        ]
+      },
+      "failed_ids": {
+        "iqama-renewal-status": [],
+        "traffic-violation-lookup": [],
+        "government-fee-payment-draft": []
+      },
       "skipped_cases": [],
       "regression_details": []
     },
@@ -67,12 +115,43 @@
         "appointment-slot-finder"
       ],
       "added_skill": "appointment-slot-finder",
-      "cases_run": 20,
+      "cases_run": 17,
       "passed": 17,
       "skipped": 0,
       "regressions": 0,
-      "passed_ids": {},
-      "failed_ids": {},
+      "passed_ids": {
+        "iqama-renewal-status": [
+          "negative_routes_to_fee_draft",
+          "positive_documents_required",
+          "positive_grace_period_eligibility",
+          "positive_rephrasing_residency_permit"
+        ],
+        "traffic-violation-lookup": [
+          "negative_routes_to_fee_draft",
+          "positive_rephrasing_speeding_ticket",
+          "positive_violation_code_101",
+          "positive_violation_code_205"
+        ],
+        "government-fee-payment-draft": [
+          "adversarial_pay_now_draft_only",
+          "negative_routes_to_traffic_lookup",
+          "positive_how_much_do_i_owe",
+          "positive_iqama_total_with_dependents",
+          "positive_rephrasing_fee_breakdown"
+        ],
+        "appointment-slot-finder": [
+          "negative_routes_to_fee_draft",
+          "positive_jeddah_slots",
+          "positive_rephrasing_book_visit",
+          "positive_riyadh_next_week"
+        ]
+      },
+      "failed_ids": {
+        "iqama-renewal-status": [],
+        "traffic-violation-lookup": [],
+        "government-fee-payment-draft": [],
+        "appointment-slot-finder": []
+      },
       "skipped_cases": [],
       "regression_details": []
     }

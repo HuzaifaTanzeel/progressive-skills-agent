@@ -1,8 +1,8 @@
 ---
 name: appointment-slot-finder
 description: |
-  Find government office appointment slots by city and date range. Use for open Absher/visit times. Do NOT use for fees or payment quotes — use government-fee-payment-draft. Do NOT use for violation or iqama eligibility questions.
-version: 1.1.0
+  Find Absher/office visit slots by city and date. Never for cost, fee totals, dependents, iqama renew quotes, or violation fines.
+version: 1.1.1
 license: MIT
 tier: read-only
 allowed-tools: ""

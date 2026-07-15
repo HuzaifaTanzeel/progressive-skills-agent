@@ -1,8 +1,8 @@
 ---
 name: government-fee-payment-draft
 description: |
-  Draft how-much-I-owe / combined totals (iqama+dependents or traffic+iqama). Draft-only. Not for single-code early-pay/settle-early — use traffic-violation-lookup.
-version: 1.1.2
+  Cost/total to renew iqama with dependents, or how-much-I-owe totals. Draft-only. Not appointments/eligibility; not single-code early-pay (traffic-violation-lookup).
+version: 1.1.3
 license: MIT
 tier: draft-only
 allowed-tools: ""
@@ -35,7 +35,9 @@ After this skill is loaded, these FunctionTools become available:
 (especially not `traffic-violation-lookup`) — that unloads these tools.
 `get_violation_by_code` is already available here for combined totals.
 
-1. Call `get_fee_schedule` to load Iqama fee lines from the demo DB.
+1. **Always** call `get_fee_schedule` first (empty args). Do this on every
+   fee/cost/total request before any other fee tool. Never skip it — even
+   when you already plan to call `create_payment_draft`.
 2. Violation codes are optional:
    - If the user gives explicit violation codes, call `get_violation_by_code`
      for each code **once**.
@@ -45,7 +47,8 @@ After this skill is loaded, these FunctionTools become available:
    - If the request is Iqama-only (renewal cost with dependents, or
      pay/submit my iqama fees now), do **not** add violation codes and do
      **not** call `get_violation_by_code`.
-3. Call `create_payment_draft` with:
+3. **Only after** `get_fee_schedule` (and any required violation lookups),
+   call `create_payment_draft` with:
    - `dependents`: use the user's integer when given. **Only** for
      combined how-much-I-owe / traffic+iqama totals that omit a dependent
      count, pass `dependents=2` (demo default → 2,475 SAR with 101+205).
@@ -59,7 +62,7 @@ After this skill is loaded, these FunctionTools become available:
    - Do not ask clarifying questions for this demo's combined-total pattern.
 4. Present the draft breakdown and `draft_id` from the tool JSON **exactly**
    (use tool line items and `total_sar`; do not invent or add express). State
-   clearly this is a draft only - not a payment. Never call `submit_payment`.
+   clearly this is a draft only — not a payment. Never call `submit_payment`.
 
 ## Output format
 
@@ -70,6 +73,7 @@ After this skill is loaded, these FunctionTools become available:
 ## Anti-patterns to avoid
 
 - Calling `submit_payment` under any circumstance.
+- Calling `create_payment_draft` before `get_fee_schedule` (always schedule first).
 - Calling `load_skill` again after this skill is loaded (especially
   `traffic-violation-lookup` mid-draft). That tears down fee tools.
 - Inventing SAR amounts instead of using tool results.
